@@ -1,0 +1,47 @@
+li {
+    list-style: none;
+}
+
+.navbar {
+    height: 10vh;
+    line-height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+
+.nav-links li {
+    color: black;
+    padding: 0 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.hero {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10%;
+}
