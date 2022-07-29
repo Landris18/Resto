@@ -3,11 +3,12 @@ import '../css/App.css';
 import Navbar from '../components/navbar';
 import { Button, Stack } from '@mui/material';
 import { Container } from '@mui/system';
-import "../css/home.css"
-import EastIcon from "@mui/icons-material/East"
+import "../css/home.css";
+import EastIcon from "@mui/icons-material/East";
 
 
 const Home = () => {
+
   return (
     <>
       <Container className='hero' sx={{ height: { xs: "80vh", md: "100vh" } }} maxWidth={false}>
