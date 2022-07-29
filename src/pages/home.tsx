@@ -15,7 +15,7 @@ const Home = () => {
         <Stack direction="row" sx={{ bgcolor: 'transparent', marginLeft: { xs: '8%', md: '8vh' }, marginTop: { xs: '18%', md: '15vh' } }} maxWidth="60%" justifyContent="end">
           <Stack direction="column">
             <h1 >
-              Des foods que vous ne trouvez pas ici, vous ne les trouverez nulle part ailleurs.
+              Des foods que vous ne trouviez pas ici, vous ne les trouverez pas nulle part ailleurs.
             </h1>
             <Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
               sx={{
