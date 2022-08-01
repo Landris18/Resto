@@ -1,4 +1,4 @@
 # RESTO
 
-Frontent the project PamREST
+Frontend of the project PamREST
 

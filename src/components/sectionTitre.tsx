@@ -8,7 +8,6 @@ const SectionTitre = (props : any) => {
                 {props.text}
                 <hr style={{width: "20%", marginTop: 10,  border: "1px solid #edbb28"}}/>
             </h1>
-            
         </>
     )
 }

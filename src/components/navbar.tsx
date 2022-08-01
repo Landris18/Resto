@@ -8,7 +8,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
@@ -152,13 +151,14 @@ const Navbar = (props: any) => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
-                                <Button
+                                <Box
+                                    component="h5"
                                     key={page}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", paddingRight: 5 }}
+                                    sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
                                 >
                                     {page}
-                                </Button>
+                                </Box>
                             ))}
                         </Box>
 
