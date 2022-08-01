@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/App.css';
 import Navbar from '../components/navbar';
-import { Button, Stack } from '@mui/material';
+import { Box, Button, Grid, Stack } from '@mui/material';
 import { Container } from '@mui/system';
 import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
@@ -39,10 +39,34 @@ const Home = () => {
         </Stack>
       </Container>
 
-      <Container id="about" maxWidth={false}>
+      <Container id="about" maxWidth="lg" style={{ marginTop: "5%"}}>
         <SectionTitre text={"Resto c'est quoi ?"} />
+        <Grid container spacing={2} my={5} sx={{justifyContent:"center", alignItems:"center"}}>
+          <Grid container xs={12} md={5}>
+            <Container maxWidth={false} style={{ textAlign: "center", }}>
+              <Box
+                className="rotated-image"
+                component="img"
+                sx={{
+                  width: 300,
+                  maxWidth: { xs: 250, md: 300 },
+                }}
+                alt="Food"
+                src="https://technext.github.io/restoran/img/hero.png"
+              />
+            </Container>
+          </Grid>
+          <Grid container xs={12} md={7}>
+            <Container maxWidth={false}>
+              <p style={{lineHeight:1.7}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
+                <br/>Praesent posuere, tortor at faucibus fermentum, est eros condimentum velit, id efficitur nulla enim at est. Duis congue ex a ipsum scelerisque gravida. Vestibulum vitae velit a mi cursus gravida non a massa. Aliquam dignissim tellus at nisl cursus, ut consequat mi efficitur. Donec interdum nunc nec nibh venenatis, eu malesuada dolor gravida. 
+              </p>
+            </Container>
+          </Grid>
+        </Grid>
       </Container>
-      
+
     </>
   );
 }

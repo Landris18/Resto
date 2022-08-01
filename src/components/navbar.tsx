@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import avatar from '../images/landry.jpeg'
 
 
 const pages = ['A propos', 'Menu', 'Catégorie', 'Réservation'];
@@ -165,7 +166,7 @@ const Navbar = (props: any) => {
                             <ThemeProvider theme={theme}>
                                 <Tooltip title="Open settings" style={{ fontFamily: "circular" }}>
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                        <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                        <Avatar alt="Avatar" src={avatar} />
                                     </IconButton>
                                 </Tooltip>
                             </ThemeProvider>

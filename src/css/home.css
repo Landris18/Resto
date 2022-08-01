@@ -13,10 +13,23 @@ h1 {
 }
 
 .section-titre {
-    font-size: 55px;
+    font-size: 50px;
     color: white;
     text-align: center;
 }
+
+.rotated-image{
+    animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 
 @media screen and (max-width: 899px) {
@@ -33,6 +46,6 @@ h1 {
         font-size: 30px;
     }
     .section-titre {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
