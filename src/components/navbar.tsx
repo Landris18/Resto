@@ -14,6 +14,7 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import avatar from '../images/landry.jpeg'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 const pages = ['A propos', 'Menu', 'Catégorie', 'Réservation'];
@@ -151,14 +152,16 @@ const Navbar = (props: any) => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
-                                <Box
-                                    component="h5"
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
-                                >
-                                    {page}
-                                </Box>
+                                <AnchorLink href='#about' style={{textDecoration:"none"}}>
+                                    <Box
+                                        component="h5"
+                                        key={page}
+                                        onClick={handleCloseNavMenu}
+                                        sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
+                                    >
+                                        {page}
+                                    </Box>
+                                </AnchorLink>
                             ))}
                         </Box>
 
