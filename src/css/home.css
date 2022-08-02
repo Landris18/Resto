@@ -8,7 +8,7 @@
 }
 
 h1 {
-    font-size: 58px;
+    font-size: 60px;
     color: white;
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 .rotated-image{
-    animation: rotation 7s infinite linear;
+    animation: rotation 8s infinite linear;
 }
 
 @keyframes rotation {

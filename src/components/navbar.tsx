@@ -153,7 +153,7 @@ const Navbar = (props: any) => {
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
                                 <AnchorLink 
-                                href={page == "A propos" ? "#about": page == "Menu" ? "#menu" : page == "Catégorie" ? "#categorie": page == "Réservation" ? "reservation" : "#"} 
+                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Catégorie" ? "#categorie": page === "Réservation" ? "reservation" : "#"} 
                                 style={{textDecoration:"none"}}>
                                     <Box
                                         component="h5"
