@@ -152,7 +152,9 @@ const Navbar = (props: any) => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
-                                <AnchorLink href='#about' style={{textDecoration:"none"}}>
+                                <AnchorLink 
+                                href={page == "A propos" ? "#about": page == "Menu" ? "#menu" : page == "Catégorie" ? "#categorie": page == "Réservation" ? "reservation" : "#"} 
+                                style={{textDecoration:"none"}}>
                                     <Box
                                         component="h5"
                                         key={page}
