@@ -5,7 +5,7 @@ import { Box, Button, Grid, Stack } from '@mui/material';
 import { Container } from '@mui/system';
 import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
-import SectionTitre from '../components/sectionTitre';
+import SectionTitle from '../components/sectionTitle';
 
 
 const Home = () => {
@@ -40,7 +40,7 @@ const Home = () => {
       </Container>
 
       <Container id="about" maxWidth="lg" style={{ marginTop: "5%"}}>
-        <SectionTitre text={"Resto c'est quoi ?"} />
+        <SectionTitle text={"Resto c'est quoi ?"} />
         <Grid container spacing={2} my={5} sx={{justifyContent:"center", alignItems:"center"}}>
           <Grid container xs={12} md={5}>
             <Container maxWidth={false} style={{ textAlign: "center", }}>
