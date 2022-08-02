@@ -14,22 +14,29 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const Home = () => {
 
   const [offers, setOffers] = useState<any>([])
-  const  matchesQuery = useMediaQuery('(max-width:1360px)');
+  const matchesQuery = useMediaQuery('(max-width:1340px)');
 
   useEffect(() => {
     const getOffers = async () => {
-      setOffers(await getSpeciallOffers());
+      if (matchesQuery){
+        const data = await getSpeciallOffers();
+        data.splice(data.length - 2, 2);        
+        setOffers(data);
+      }
+      else {
+        setOffers(await getSpeciallOffers());
+      }
     }
     getOffers();
 
-  }, []);
+  }, [matchesQuery]);
 
   return (
     <>
-      <Container id="hero" sx={{ height: { xs: "80vh", md: "100vh" } }} maxWidth={false}>
+      <Container id="hero" sx={{ height: { xs: "100vh", md: "100vh" } }} maxWidth={false}>
         <Navbar />
         <Stack direction="row" maxWidth="60%" justifyContent="end">
-          <Stack direction="column" sx={{ bgcolor: 'transparent', marginLeft: { xs: '8%', md: '8%' }, marginTop: { xs: '18vh', md: '20vh' } }}>
+          <Stack direction="column" sx={{ bgcolor: 'transparent', marginLeft: { xs: '8%', md: '8%' }, marginTop: { xs: '22vh', md: '20vh' } }}>
             <h1 >
               Des foods que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
             </h1>
@@ -86,7 +93,7 @@ const Home = () => {
       <Container id="promotion" maxWidth={false} style={{ width: "100%", padding: "2% 5% 0% 5% " }}>
         <h2 style={{ color: "#222" }}>OFFRE SPECIALE</h2>
         <Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
-          <Grid container item xs={12} md={ matchesQuery ? 12 : 4}>
+          <Grid container item xs={12} md={matchesQuery ? 6 : 4}>
             <Container maxWidth={false}>
               <Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 75 }}>
                 Promotions
@@ -126,10 +133,10 @@ const Home = () => {
               </Grid>
             </Container>
           </Grid>
-          <Grid container item xs={12} md={ matchesQuery ? 12 : 8}>
+          <Grid container item xs={12} md={matchesQuery ? 6 : 8}>
             {offers.map((offer: any) => (
-              <Grid className="paper" key={offer.id} item xs={12} md={3} px={1} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
-                <Paper elevation={0.9} sx={{ textAlign: "center", justifyContent: "center", pb: 5, minHeight: 200, backgroundColor: "whitesmoke", borderRadius: 4 }}>
+              <Grid className="paper" key={offer.id} item xs={12} md={matchesQuery ? 6 : 4} pl={{xs: 0, md:2}} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
+                <Paper elevation={0} sx={{ textAlign: "center", justifyContent: "center", pb: 5, minHeight: 200, backgroundColor: "whitesmoke", borderRadius: 4 }}>
                   <Box
                     component="img"
                     sx={{

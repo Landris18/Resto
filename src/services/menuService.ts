@@ -39,18 +39,6 @@ export async function getSpeciallOffers() {
             "name": "Pizza continentale",
             "price": "20 $",
             "image": offer6
-        },
-        {
-            "id" : 7,
-            "name": "French tacos",
-            "price": "15 $",
-            "image": offer1
-        },
-        {
-            "id" : 8,
-            "name": "Steak frite",
-            "price": "10 $",
-            "image": offer6
         }
     ]
 
