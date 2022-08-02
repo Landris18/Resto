@@ -1,10 +1,7 @@
 @font-face {
   font-family: 'circular';
   src: local('circular'), url(../fonts/CircularStdBold/CircularStdBold.woff) format('Woff');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
 }
-
 
 body {
   margin: 0;

@@ -17,7 +17,7 @@ import avatar from '../images/landry.jpeg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
-const pages = ['A propos', 'Menu', 'Catégorie', 'Réservation'];
+const pages = ['A propos', 'Promotions', 'Menu','Réservation'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -152,12 +152,13 @@ const Navbar = (props: any) => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
-                                <AnchorLink 
-                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Catégorie" ? "#categorie": page === "Réservation" ? "reservation" : "#"} 
+                                <AnchorLink
+                                offset={100}
+                                key={page}
+                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Promotions" ? "#promotion": page === "Réservation" ? "reservation" : "#"} 
                                 style={{textDecoration:"none"}}>
                                     <Box
                                         component="h5"
-                                        key={page}
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
                                     >

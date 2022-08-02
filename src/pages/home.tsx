@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import Navbar from '../components/navbar';
-import { Box, Button, Grid, Stack } from '@mui/material';
+import { Box, Button, Grid, Paper, Stack, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
 import SectionTitle from '../components/sectionTitle';
+import promotion from '../images/promotion.png';
+import { getSpeciallOffers } from '../services/menuService';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 const Home = () => {
+
+  const [offers, setOffers] = useState<any>([])
+  const  matchesQuery = useMediaQuery('(max-width:1360px)');
+
+  useEffect(() => {
+    const getOffers = async () => {
+      setOffers(await getSpeciallOffers());
+    }
+    getOffers();
+
+  }, []);
 
   return (
     <>
@@ -22,7 +36,6 @@ const Home = () => {
             <Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
               sx={{
                 my: 2,
-                textAlign: "center",
                 color: 'white',
                 textTransform: 'capitalize',
                 fontFamily: "circular",
@@ -39,10 +52,10 @@ const Home = () => {
         </Stack>
       </Container>
 
-      <Container id="about" maxWidth="lg" style={{ marginTop: "5%"}}>
+      <Container id="about" maxWidth="lg" style={{ marginTop: "5%" }}>
         <SectionTitle text={"Resto c'est quoi ?"} />
-        <Grid container spacing={2} my={5} sx={{justifyContent:"center", alignItems:"center"}}>
-          <Grid container xs={12} md={5}>
+        <Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
+          <Grid container item xs={12} md={5}>
             <Container maxWidth={false} style={{ textAlign: "center", }}>
               <Box
                 className="rotated-image"
@@ -56,13 +69,87 @@ const Home = () => {
               />
             </Container>
           </Grid>
-          <Grid container xs={12} md={7}>
+          <Grid container item xs={12} md={7}>
             <Container maxWidth={false}>
-              <p style={{lineHeight:1.7}}>
+              <Typography sx={{ color:"white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
+                A propos de nous
+              </Typography>
+              <h2 style={{ color: "#e7b10c" }}>Le meilleur distributer de fast food de l'océan indien, c'est ici.</h2>
+              <p style={{ lineHeight: 1.7,  color: "#222", fontSize:15}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
-                <br/>Praesent posuere, tortor at faucibus fermentum, est eros condimentum velit, id efficitur nulla enim at est. Duis congue ex a ipsum scelerisque gravida. Vestibulum vitae velit a mi cursus gravida non a massa. Aliquam dignissim tellus at nisl cursus, ut consequat mi efficitur. Donec interdum nunc nec nibh venenatis, eu malesuada dolor gravida. 
               </p>
             </Container>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Container id="promotion" maxWidth={false} style={{ width: "100%", padding: "2% 5% 0% 5% " }}>
+        <h2 style={{ color: "#222" }}>OFFRE SPECIALE</h2>
+        <Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
+          <Grid container item xs={12} md={ matchesQuery ? 12 : 4}>
+            <Container maxWidth={false}>
+              <Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 75 }}>
+                Promotions
+              </Typography>
+              <Box
+                component="img"
+                sx={{
+                  width: 400,
+                  maxWidth: { xs: 300, md: 400 },
+                }}
+                alt="Food"
+                src={promotion}
+              />
+              <h3>Burger king combo x4</h3>
+              <p style={{ fontFamily: "circular", fontSize: 14 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
+              </p>
+              <Grid container item spacing={2} px={2} sx={{ justifyContent: "space-between", alignItems: "center" }}>
+                <Grid container item xs={4} md={6}>
+                  <h2>20 $</h2>
+                </Grid>
+                <Grid container item xs={8} md={6} >
+                  <Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
+                    sx={{
+                      color: 'white',
+                      fontFamily: "circular",
+                      fontSize: "12px",
+                      width: "190px",
+                      backgroundColor: "#000",
+                      borderRadius: "50px",
+                    }}
+                    disableElevation
+                  >
+                    Voir les autres
+                  </Button>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
+          <Grid container item xs={12} md={ matchesQuery ? 12 : 8}>
+            {offers.map((offer: any) => (
+              <Grid className="paper" key={offer.id} item xs={12} md={3} px={1} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
+                <Paper elevation={0.9} sx={{ textAlign: "center", justifyContent: "center", pb: 5, minHeight: 200, backgroundColor: "whitesmoke", borderRadius: 4 }}>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: 150,
+                      maxWidth: { xs: 150, md: 150 },
+                    }}
+                    alt="Food"
+                    src={offer?.image}
+                  />
+                  <Container>
+                    {offer?.name}
+                  </Container>
+                  <Grid container justifyContent="center">
+                    <Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 1, backgroundColor: "#edbb28", borderRadius: 50, width: 40 }}>
+                      {offer?.price}
+                    </Typography>
+                  </Grid>
+                </Paper>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Container>
