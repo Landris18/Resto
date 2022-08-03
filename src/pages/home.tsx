@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import Navbar from '../components/navbar';
-import { Box, Button, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Fab, Fade, Grid, Paper, Stack, Typography, useScrollTrigger } from '@mui/material';
 import { Container } from '@mui/system';
 import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
@@ -9,9 +9,32 @@ import SectionTitle from '../components/sectionTitle';
 import promotion from '../images/promotion.png';
 import { getSpeciallOffers } from '../services/menuService';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
-const Home = () => {
+
+function ScrollTop(props: any) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+  return (
+    <Fade in={trigger}>
+      <Box
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
+
+
+const Home = (props: any) => {
 
   const [offers, setOffers] = useState<any>([])
   const matchesQuery = useMediaQuery('(max-width:1340px)');
@@ -160,6 +183,14 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+
+      <ScrollTop {...props}>
+        <AnchorLink style={{ textDecoration: "none" }} href="#hero">
+          <Fab sx={{ backgroundColor: "#edbb28" }} size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </AnchorLink>
+      </ScrollTop>
     </>
   );
 }
