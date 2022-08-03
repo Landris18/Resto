@@ -18,9 +18,9 @@ const Home = () => {
 
   useEffect(() => {
     const getOffers = async () => {
-      if (matchesQuery){
+      if (matchesQuery) {
         const data = await getSpeciallOffers();
-        data.splice(data.length - 2, 2);        
+        data.splice(data.length - 2, 2);
         setOffers(data);
       }
       else {
@@ -33,10 +33,10 @@ const Home = () => {
 
   return (
     <>
-      <Container id="hero" sx={{ height: { xs: "100vh", md: "100vh" } }} maxWidth={false}>
+      <Container id="hero" sx={{ height: "100vh" }} maxWidth={false}>
         <Navbar />
         <Stack direction="row" maxWidth="60%" justifyContent="end">
-          <Stack direction="column" sx={{ bgcolor: 'transparent', marginLeft: { xs: '8%', md: '8%' }, marginTop: { xs: '22vh', md: '20vh' } }}>
+          <Stack direction="column" sx={{ bgcolor: 'transparent', marginLeft: '8%', marginTop: { xs: '22vh', md: '20vh' } }}>
             <h1 >
               Des foods que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
             </h1>
@@ -78,11 +78,11 @@ const Home = () => {
           </Grid>
           <Grid container item xs={12} md={7}>
             <Container maxWidth={false}>
-              <Typography sx={{ color:"white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
+              <Typography sx={{ color: "white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
                 A propos de nous
               </Typography>
               <h2 style={{ color: "#e7b10c" }}>Le meilleur distributer de fast food de l'océan indien, c'est ici.</h2>
-              <p style={{ lineHeight: 1.7,  color: "#222", fontSize:15}}>
+              <p style={{ lineHeight: 1.7, color: "#222", fontSize: 15 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
               </p>
             </Container>
@@ -135,7 +135,7 @@ const Home = () => {
           </Grid>
           <Grid container item xs={12} md={matchesQuery ? 6 : 8}>
             {offers.map((offer: any) => (
-              <Grid className="paper" key={offer.id} item xs={12} md={matchesQuery ? 6 : 4} pl={{xs: 0, md:2}} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
+              <Grid className="paper" key={offer.id} item xs={12} md={matchesQuery ? 6 : 4} pl={{ xs: 0, md: 2 }} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
                 <Paper elevation={0} sx={{ textAlign: "center", justifyContent: "center", pb: 5, minHeight: 200, backgroundColor: "whitesmoke", borderRadius: 4 }}>
                   <Box
                     component="img"
@@ -160,7 +160,6 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
-
     </>
   );
 }
