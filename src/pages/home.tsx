@@ -104,7 +104,7 @@ const Home = (props: any) => {
               <Typography sx={{ color: "white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
                 A propos de nous
               </Typography>
-              <h2 style={{ color: "#e7b10c" }}>Le meilleur distributer de fast food de l'océan indien, c'est ici.</h2>
+              <h2 style={{ color: "#e7b10c" }}>Le meilleur distributeur de fast food de l'océan indien, c'est ici.</h2>
               <p style={{ lineHeight: 1.7, color: "#222", fontSize: 16, fontFamily:"Josefin Sans, circular", fontWeight:"500" }}>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
               </p>

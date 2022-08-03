@@ -2,6 +2,7 @@
   "name": "resto",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Landris18.github.io/Resto",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -29,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-anchor-link-smooth-scroll": "^1.0.2"
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+    "gh-pages": "^4.0.0"
   }
 }
