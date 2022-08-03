@@ -105,8 +105,8 @@ const Home = (props: any) => {
                 A propos de nous
               </Typography>
               <h2 style={{ color: "#e7b10c" }}>Le meilleur distributer de fast food de l'océan indien, c'est ici.</h2>
-              <p style={{ lineHeight: 1.7, color: "#222", fontSize: 15 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
+              <p style={{ lineHeight: 1.7, color: "#222", fontSize: 16, fontFamily:"Josefin Sans, circular", fontWeight:"500" }}>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
               </p>
             </Container>
           </Grid>
@@ -131,7 +131,7 @@ const Home = (props: any) => {
                 src={promotion}
               />
               <h3>Burger king combo x4</h3>
-              <p style={{ fontFamily: "circular", fontSize: 14 }}>
+              <p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
               </p>
               <Grid container item spacing={2} px={2} sx={{ justifyContent: "space-between", alignItems: "center" }}>
