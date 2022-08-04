@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/Resto/static/css/main.0c7c444d.css",
-    "main.js": "/Resto/static/js/main.314a21e2.js",
+    "main.css": "/Resto/static/css/main.4621fff6.css",
+    "main.js": "/Resto/static/js/main.185d2859.js",
     "static/js/787.e5adab6e.chunk.js": "/Resto/static/js/787.e5adab6e.chunk.js",
     "static/media/offer1.png": "/Resto/static/media/offer1.9c9336552e8a3765e0a2.png",
     "static/media/promotion.png": "/Resto/static/media/promotion.089ed4bed972189ec317.png",
+    "static/media/burger.png": "/Resto/static/media/burger.c6350b4425f362ab9e43.png",
     "static/media/offer6.png": "/Resto/static/media/offer6.c6a4eecfba6a285174fe.png",
     "static/media/hero-bg.jpg": "/Resto/static/media/hero-bg.891f6b4c95d71357cc1b.jpg",
     "static/media/CircularStdBold.woff": "/Resto/static/media/CircularStdBold.1df69deaee53a33837f1.woff",
     "static/media/landry.jpeg": "/Resto/static/media/landry.2629454b13b71e3e01df.jpeg",
     "index.html": "/Resto/index.html",
-    "main.0c7c444d.css.map": "/Resto/static/css/main.0c7c444d.css.map",
-    "main.314a21e2.js.map": "/Resto/static/js/main.314a21e2.js.map",
+    "main.4621fff6.css.map": "/Resto/static/css/main.4621fff6.css.map",
+    "main.185d2859.js.map": "/Resto/static/js/main.185d2859.js.map",
     "787.e5adab6e.chunk.js.map": "/Resto/static/js/787.e5adab6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c7c444d.css",
-    "static/js/main.314a21e2.js"
+    "static/css/main.4621fff6.css",
+    "static/js/main.185d2859.js"
   ]
 }
