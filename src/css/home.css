@@ -1,7 +1,5 @@
 #hero {
-    background-image: url(../images/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../images/hero-bg.jpg) no-repeat center center fixed;
     background-size: cover;
     top: 0;
 }
@@ -14,6 +12,11 @@ h1 {
 h2 {
     font-size: 30px;
 }
+
+/* .nav-item.active{
+    border-bottom: 2px solid white;
+    height: 40px;
+} */
 
 .section-titre {
     font-size: 50px;

@@ -17,7 +17,7 @@ import avatar from '../images/landry.jpeg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
-const pages = ['A propos', 'Promotions', 'Menu','Réservation', "Nous contacter"];
+const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -153,14 +153,15 @@ const Navbar = (props: any) => {
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
                                 <AnchorLink
-                                offset={100}
-                                key={page}
-                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Promotions" ? "#promotion": page === "Réservation" ? "#reservation" : page === "Nous contacter" ? "#footer" : "#" } 
-                                style={{textDecoration:"none"}}>
+                                    key={page}
+                                    className={page === "A propos" ? "nav-item about" : page === "Offres spéciales" ? "nav-item offres" : page === "Menus" ? "nav-item menus" : page === "Réservation" ? "nav-item reservation" : page === "Nous contacter" ? "nav-item footer" : "#"}
+                                    offset={100}
+                                    href={page === "A propos" ? "#about" : page === "Offres spéciales" ? "#offres" : page === "Menus" ? "#menus" : page === "Réservation" ? "#reservation" : page === "Nous contacter" ? "#footer" : "#"}
+                                    style={{ textDecoration: "none", justifyContent: "center" }}>
                                     <Box
                                         component="h5"
                                         onClick={handleCloseNavMenu}
-                                        sx={{ my: 2, textAlign: "center", color: 'white', display: 'block', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
+                                        sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
                                     >
                                         {page}
                                     </Box>
