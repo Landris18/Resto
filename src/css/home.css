@@ -34,6 +34,12 @@ h2 {
     transform: scale(1.08);
 }
 
+.voir-plus:hover{
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    color: black;
+}
+
 
 @keyframes rotation {
     from {

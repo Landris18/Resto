@@ -13,11 +13,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import avatar from '../images/landry.jpeg'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import avatar from '../images/landry.jpeg';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
-const pages = ['A propos', 'Promotions', 'Menu','Réservation'];
+const pages = ['A propos', 'Promotions', 'Menu','Réservation', "Nous contacter"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -155,7 +155,7 @@ const Navbar = (props: any) => {
                                 <AnchorLink
                                 offset={100}
                                 key={page}
-                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Promotions" ? "#promotion": page === "Réservation" ? "reservation" : "#"} 
+                                href={page === "A propos" ? "#about": page === "Menu" ? "#menu" : page === "Promotions" ? "#promotion": page === "Réservation" ? "#reservation" : page === "Nous contacter" ? "#footer" : "#" } 
                                 style={{textDecoration:"none"}}>
                                     <Box
                                         component="h5"
