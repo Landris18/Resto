@@ -134,11 +134,11 @@ const Home = (props: any) => {
               <p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
               </p>
-              <Grid container item spacing={2} px={2} sx={{ justifyContent: "space-between", alignItems: "center" }}>
-                <Grid container item xs={4} md={6}>
+              <Grid container item spacing={2} px={0} sx={{ justifyContent: "space-between", alignItems: "center" }}>
+                <Grid container item xs={4} md={3} >
                   <h2>20 $</h2>
                 </Grid>
-                <Grid container item xs={8} md={6} >
+                <Grid container item xs={8} md={9} justifyContent="end">
                   <Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
                     sx={{
                       color: 'white',
@@ -172,7 +172,7 @@ const Home = (props: any) => {
                   <Container>
                     {offer?.name}
                   </Container>
-                  <Grid container justifyContent="center">
+                  <Grid container item justifyContent="center">
                     <Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 1, backgroundColor: "#edbb28", borderRadius: 50, width: 40 }}>
                       {offer?.price}
                     </Typography>
