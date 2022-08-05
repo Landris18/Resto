@@ -14,7 +14,7 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import avatar from '../images/landry.jpeg';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'react-scroll';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
@@ -152,11 +152,13 @@ const Navbar = (props: any) => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
                             {pages.map((page) => (
-                                <AnchorLink
+                                <Link
+                                    smooth spy
+                                    activeClass="nav-item active"
+                                    to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "reservation" : page === "Nous contacter" ? "footer" : "#"}
                                     key={page}
-                                    className={page === "A propos" ? "nav-item about" : page === "Offres spéciales" ? "nav-item offres" : page === "Menus" ? "nav-item menus" : page === "Réservation" ? "nav-item reservation" : page === "Nous contacter" ? "nav-item footer" : "#"}
-                                    offset={100}
-                                    href={page === "A propos" ? "#about" : page === "Offres spéciales" ? "#offres" : page === "Menus" ? "#menus" : page === "Réservation" ? "#reservation" : page === "Nous contacter" ? "#footer" : "#"}
+                                    duration={400}
+                                    offset={-90}
                                     style={{ textDecoration: "none", justifyContent: "center" }}>
                                     <Box
                                         component="h5"
@@ -165,7 +167,7 @@ const Navbar = (props: any) => {
                                     >
                                         {page}
                                     </Box>
-                                </AnchorLink>
+                                </Link>
                             ))}
                         </Box>
 

@@ -13,10 +13,23 @@ h2 {
     font-size: 30px;
 }
 
-/* .nav-item.active{
-    border-bottom: 2px solid white;
+.nav-item.active{
+    text-align:center;
+    padding-bottom:5px;
+    background: /* gradient can be an image */
+      linear-gradient(
+        to right, 
+        white 0%,
+        white 30%,
+        black 47%,
+        black 100%
+      )
+      left 
+      bottom
+      no-repeat; 
+    background-size:100% 1px ;/* if linear-gradient, we need to resize it */
     height: 40px;
-} */
+}
 
 .section-titre {
     font-size: 50px;

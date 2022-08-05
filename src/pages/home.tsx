@@ -10,9 +10,9 @@ import promotion from '../images/promotion.png';
 import { getSpeciallOffers } from '../services/menuService';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import burger from '../images/burger.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link } from 'react-scroll';
 
 
 function ScrollTop(props: any) {
@@ -231,11 +231,15 @@ const Home = (props: any) => {
       </section>
 
       <ScrollTop {...props}>
-        <AnchorLink style={{ textDecoration: "none" }} href="#hero">
+        <Link
+          smooth spy
+          duration={400}
+          style={{ textDecoration: "none" }}
+          to="hero">
           <Fab sx={{ backgroundColor: "#edbb28" }} size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
           </Fab>
-        </AnchorLink>
+        </Link>
       </ScrollTop>
     </>
   );
