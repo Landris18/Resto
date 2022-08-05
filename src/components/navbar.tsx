@@ -12,27 +12,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
 import avatar from '../images/landry.jpeg';
 import { Link } from 'react-scroll';
+import {ElevationScroll} from '../components/utils/scrollUtils';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-
-function ElevationScroll(props: any) {
-    const { children, window } = props;
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-        target: window ? window() : undefined,
-    });
-
-    return React.cloneElement(children, {
-        style: { backgroundColor: trigger ? "black" : "transparent", boxShadow: "none" }
-    });
-}
 
 
 const theme = createTheme({
