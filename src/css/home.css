@@ -50,6 +50,28 @@ h2 {
     transform: scale(1.08);
 }
 
+.social-icon {
+    transition: 1s;
+}
+
+.social-icon:hover {
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+
+.sc-linkedin:hover{
+    background-color: #0075B5 !important;
+}
+
+.sc-facebook:hover{
+    background-color: #1778F2 !important;
+}
+
+.sc-github:hover{
+    background-color: #444 !important;
+}
+
 .voir-plus:hover{
     background-color: #fff !important;
     border: 1px solid #fff !important;

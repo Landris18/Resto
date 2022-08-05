@@ -14,11 +14,11 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import avatar from '../images/landry.jpeg';
 import { Link } from 'react-scroll';
-import {ElevationScroll} from '../components/utils/scrollUtils';
+import { ElevationScroll } from '../components/utils/scrollUtils';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Dashboard', 'Se déconnecter'];
 
 
 const theme = createTheme({
@@ -109,9 +109,20 @@ const Navbar = (props: any) => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center" sx={{ fontFamily: "circular", }}>{page}</Typography>
-                                    </MenuItem>
+                                    <Link
+                                        key={page}
+                                        onClick={handleCloseNavMenu}
+                                        smooth spy
+                                        to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "reservation" : page === "Nous contacter" ? "footer" : "#"}
+                                        duration={400}
+                                        offset={-90}
+                                    >
+                                        <MenuItem >
+                                            <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize:14 }}>{page}</Typography>
+
+                                        </MenuItem>
+
+                                    </Link>
                                 ))}
                             </Menu>
                         </Box>
@@ -159,7 +170,7 @@ const Navbar = (props: any) => {
 
                         <Box sx={{ flexGrow: 0 }}>
                             <ThemeProvider theme={theme}>
-                                <Tooltip title="Open settings" style={{ fontFamily: "circular" }}>
+                                <Tooltip title="Compe administrateur" style={{ fontFamily: "circular" }}>
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                         <Avatar alt="Avatar" src={avatar} />
                                     </IconButton>
@@ -183,7 +194,7 @@ const Navbar = (props: any) => {
                             >
                                 {settings.map((setting) => (
                                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Typography textAlign="center" sx={{ fontFamily: "circular" }}>{setting} </Typography>
+                                        <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize:14 }}>{setting} </Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
