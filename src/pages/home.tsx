@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import Navbar from '../components/navbar';
-import { Box, Button, Divider, Fab, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Fab, Grid, Paper, Stack, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
@@ -242,7 +242,7 @@ const Home = (props: any) => {
 							>
 								RESTO
 							</Typography>
-							<p style={{ color: "white", fontSize: 14, fontWeight: "500", lineHeight: 1.7, width:"80%" }}>
+							<p style={{ color: "white", fontSize: 14, fontWeight: "500", lineHeight: 1.7, width: "80%" }}>
 								Le meilleur restaurant de Fast-Food de l'océan indien est ravi de vous servir tous les jours.
 							</p>
 						</Grid>
@@ -342,9 +342,17 @@ const Home = (props: any) => {
 							<p style={{ color: "white", fontSize: 14, fontWeight: "500" }}>
 								Inscrivez-vous pour ne rien rater de Resto.
 							</p>
-							{/* <input style={{display:"block"}}/> */}
+							<input placeholder="Votre adresse email" style={{
+								display: "block", fontFamily: 'Product',
+								backgroundColor: '#191a1c',
+								borderRadius: 25,
+								paddingLeft: 20,
+								border: 'none',
+								color: '#fff',
+								height: 35
+							}} />
 							<Fab variant="extended" sx={{ boxShadow: "none", height: 30, fontFamily: "circular", textTransform: "capitalize", marginTop: 1.5 }}>
-								<SendIcon sx={{ mr: 1, fontSize:15 }} />
+								<SendIcon sx={{ mr: 1, fontSize: 15 }} />
 								Envoyer
 							</Fab>
 						</Grid>
