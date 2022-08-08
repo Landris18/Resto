@@ -82,8 +82,6 @@ h2 {
     outline: none;
 }
 
-#footer { bottom:0;}
-
 @keyframes rotation {
     from {
         transform: rotate(0deg);
