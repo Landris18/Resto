@@ -109,7 +109,7 @@ const Home = (props: any) => {
 
 			<section id="offres">
 				<Container maxWidth={false} style={{ width: "100%", padding: "2% 5% 0% 5% " }}>
-					<h2 style={{ color: "#222" }}>OFFRE SPECIALE</h2>
+					<h2 style={{ color: "#222" }}>OFFRES SPECIALES</h2>
 					<Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4}>
 							<Container maxWidth={false}>
@@ -126,7 +126,7 @@ const Home = (props: any) => {
 									src={promotion}
 								/>
 								<h3>Burger king combo x4</h3>
-								<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15 }}>
+								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15 }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
 								</p>
 								<Grid container item spacing={2} px={0} sx={{ justifyContent: "space-between", alignItems: "center" }}>
