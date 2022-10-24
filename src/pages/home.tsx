@@ -7,6 +7,7 @@ import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
 import SectionTitle from '../components/utils/sectionTitle';
 import promotion from '../images/promotion.png';
+import hero from '../images/hero.png';
 import { getSpeciallOffers } from '../services/menuService';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -88,7 +89,7 @@ const Home = (props: any) => {
 										maxWidth: { xs: 250, md: 300 },
 									}}
 									alt="Food"
-									src="https://technext.github.io/restoran/img/hero.png"
+									src={hero}
 								/>
 							</Container>
 						</Grid>
