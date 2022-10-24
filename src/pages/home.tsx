@@ -187,7 +187,7 @@ const Home = (props: any) => {
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#fc0330", borderRadius: 50, width: 45, color: "#fff" }}>
 										Gratuit
 									</Typography>
-									<h1 style={{ color: "#fff" }}>Plus de 100 Burgers offerts gratuiment tous les jours.</h1>
+									<h1 style={{ color: "#fff" }}>Plus de 100 Burgers offerts gratuitement tous les jours.</h1>
 									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff" }}>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									</p>
@@ -343,7 +343,8 @@ const Home = (props: any) => {
 								Inscrivez-vous pour ne rien rater de Resto.
 							</p>
 							<input placeholder="Votre adresse email" style={{
-								display: "block", fontFamily: 'Product',
+								display: "block", 
+								fontFamily: 'circular',
 								backgroundColor: '#191a1c',
 								borderRadius: 25,
 								paddingLeft: 20,
