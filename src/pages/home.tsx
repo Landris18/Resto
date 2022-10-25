@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import '../css/App.css';
+import '../assets/css/app.css';
+import '../assets/css/home.css';
 import Navbar from '../components/navbar';
 import { Box, Button, Fab, Grid, Paper, Stack, Typography } from '@mui/material';
 import { Container } from '@mui/system';
-import "../css/home.css";
 import EastIcon from "@mui/icons-material/East";
-import SectionTitle from '../components/utils/sectionTitle';
-import promotion from '../images/promotion.png';
-import hero from '../images/hero.png';
+import SectionTitle from '../components/sectionTitle';
+import promotion from '../assets/images/promotion.png';
+import hero from '../assets/images/hero.png';
+import burger from '../assets/images/burger.png';
 import { getSpeciallOffers } from '../services/menuService';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import burger from '../images/burger.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-scroll';
-import { ScrollToTop } from '../components/utils/scrollUtils';
+import { ScrollToTop } from '../components/scrolls';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import SendIcon from '@mui/icons-material/Send';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -188,7 +188,7 @@ const Home = (props: any) => {
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#fc0330", borderRadius: 50, width: 45, color: "#fff" }}>
 										Gratuit
 									</Typography>
-									<h1 style={{ color: "#fff" }}>Plus de 100 Burgers offerts gratuitement tous les jours.</h1>
+									<h1 style={{ color: "#fff" }}>Plus de 100 Burgers offertent gratuitement tous les jours.</h1>
 									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff" }}>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									</p>

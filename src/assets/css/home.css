@@ -31,6 +31,11 @@ h2 {
     height: 40px;
 }
 
+
+.button-reservation:hover {
+    background-color: black !important;
+}
+
 .section-titre {
     font-size: 50px;
     color: white;

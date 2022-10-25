@@ -1,5 +1,5 @@
-import offer1 from "../images/offer1.png";
-import offer6 from "../images/offer6.png";
+import offer1 from "../assets/images/offer1.png";
+import offer6 from "../assets/images/offer6.png";
 
 
 export async function getSpeciallOffers() {

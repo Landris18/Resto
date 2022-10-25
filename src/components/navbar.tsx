@@ -12,9 +12,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
-import avatar from '../images/landry.jpeg';
+import avatar from '../assets/images/landry.jpeg';
 import { Link } from 'react-scroll';
-import { ElevationScroll } from '../components/utils/scrollUtils';
+import { ElevationScroll } from './scrolls';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
