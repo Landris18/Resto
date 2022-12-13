@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../assets/css/app.css';
 import '../assets/css/home.css';
 import Navbar from '../components/navbar';
@@ -9,7 +9,7 @@ import SectionTitle from '../components/sectionTitle';
 import promotion from '../assets/images/promotion.png';
 import hero from '../assets/images/hero.png';
 import burger from '../assets/images/burger.png';
-import { getSpeciallOffers } from '../services/menuService';
+import { getSpeciallOffers } from '../services';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -31,47 +31,29 @@ const Home = (props: any) => {
 	const [offers, setOffers] = useState<any>([])
 	const matchesQuery = useMediaQuery('(max-width:1340px)');
 
-
 	useEffect(() => {
 		const getOffers = async () => {
-			if (matchesQuery) {
-				const data = await getSpeciallOffers();
-				data.splice(data.length - 2, 2);
-				setOffers(data);
-			}
-			else {
-				setOffers(await getSpeciallOffers());
-			}
+			const data = await getSpeciallOffers();
+			setOffers(data);
 		}
 		getOffers();
+	}, []);
 
-	}, [matchesQuery]);
 
 	return (
 		<>
 			<Container id="hero" sx={{ height: "100vh" }} maxWidth={false}>
 				<Navbar />
-				<Stack direction="row" maxWidth="60%" justifyContent="end">
-					<Stack direction="column" sx={{ bgcolor: 'transparent', marginLeft: '8%', marginTop: { xs: '22vh', md: '20vh' } }}>
-						<h1 >
-							Des menus que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
-						</h1>
-						<Button className='button-reservation' endIcon={<ShoppingCartOutlinedIcon />} variant="contained"
-							sx={{
-								my: 2,
-								color: 'white',
-								textTransform: 'capitalize',
-								fontFamily: "circular",
-								fontSize: "16px",
-								width: "160px",
-								backgroundColor: "#000",
-								borderRadius: "50px"
-							}}
-							disableElevation
-						>
-							Reservation
-						</Button>
-					</Stack>
+				<Stack direction="column" maxWidth={{xs: "80%", md: "60%"}} justifyContent="end" sx={{ bgcolor: 'transparent', marginLeft: '8%' }}>
+					<Typography variant="h2" sx={{ fontFamily: "circular", color: "white", fontSize: {xs: "2.2rem", md: "3.5rem"} }} mt={{ md: "32vh", xs: "25vh" }}>
+						Des menus que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
+					</Typography>
+					<Button className='button-reservation' endIcon={<ShoppingCartOutlinedIcon />} variant="contained"
+						sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", fontSize: "16px", width: "160px", backgroundColor: "#000", borderRadius: "50px" }}
+						disableElevation
+					>
+						Reservation
+					</Button>
 				</Stack>
 			</Container>
 
@@ -81,9 +63,7 @@ const Home = (props: any) => {
 					<Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
 						<Grid container item xs={12} md={5}>
 							<Container maxWidth={false} style={{ textAlign: "center", }}>
-								<Box
-									className="rotated-image"
-									component="img"
+								<Box className="rotated-image" component="img"
 									sx={{
 										width: 300,
 										maxWidth: { xs: 250, md: 300 },
@@ -94,12 +74,12 @@ const Home = (props: any) => {
 							</Container>
 						</Grid>
 						<Grid container item xs={12} md={7}>
-							<Container maxWidth={false}>
-								<Typography sx={{ color: "white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
+							<Container maxWidth={false} sx={{ textAlign: { xs: "center", md: "start" } }}>
+								<Typography sx={{ display: { xs: "none", md: "block" }, color: "white", fontFamily: "circular", fontSize: 13, py: 0.5, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 108 }}>
 									A propos de nous
 								</Typography>
 								<h2 style={{ color: "#e7b10c" }}>Le meilleur restaurant de fast food de l'océan indien, c'est ici.</h2>
-								<p style={{ lineHeight: 1.7, color: "#222", fontSize: 16, fontFamily: "Josefin Sans, circular", fontWeight: "500" }}>
+								<p style={{ lineHeight: 1.7, color: "#000", fontSize: 16, fontFamily: "Josefin Sans, circular", fontWeight: "500" }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
 								</p>
 							</Container>
@@ -110,57 +90,50 @@ const Home = (props: any) => {
 
 			<section id="offres">
 				<Container maxWidth={false} style={{ width: "100%", padding: "2% 5% 0% 5% " }}>
-					<h2 style={{ color: "#222" }}>OFFRES SPECIALES</h2>
+					<h2 style={{ color: "#222", textAlign: matchesQuery ? "center" : "start" }}>OFFRES SPECIALES</h2>
 					<Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
-						<Grid container item xs={12} md={matchesQuery ? 6 : 4}>
-							<Container maxWidth={false}>
-								<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#edbb28", borderRadius: 50, width: 75 }}>
-									Promotions
-								</Typography>
+						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
+							<Container maxWidth={false} >
 								<Box
 									component="img"
 									sx={{
-										width: 400,
-										maxWidth: { xs: 300, md: 400 },
+										width: 350,
+										maxWidth: { xs: 250, md: 350 },
+										borderRadius: 3
 									}}
 									alt="Food"
 									src={promotion}
 								/>
-								<h3>Burger king combo x4</h3>
-								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15 }}>
+								<h3>Burger King x4</h3>
+								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#000" }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
 								</p>
-								<Grid container item spacing={2} px={0} sx={{ justifyContent: "space-between", alignItems: "center" }}>
-									<Grid container item xs={4} md={3} >
-										<h2>20 $</h2>
-									</Grid>
-									<Grid container item xs={8} md={9} justifyContent="end">
-										<Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
-											sx={{
-												color: 'white',
-												fontFamily: "circular",
-												fontSize: "12px",
-												width: "190px",
-												backgroundColor: "#000",
-												borderRadius: "50px",
-											}}
-											disableElevation
-										>
-											Voir les autres
-										</Button>
-									</Grid>
-								</Grid>
+								<h2 style={{ lineHeight: 0 }}>20 $</h2>
+								<Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
+									sx={{
+										color: 'white',
+										fontFamily: "circular",
+										fontSize: "12px",
+										width: "190px",
+										backgroundColor: "#000",
+										borderRadius: "50px",
+									}}
+									disableElevation
+								>
+									Voir les autres
+								</Button>
 							</Container>
 						</Grid>
-						<Grid container item xs={12} md={matchesQuery ? 6 : 8}>
+						<Grid container item xs={12} md={matchesQuery ? 6 : 8} rowSpacing={8} mt={{ xs: 1, md: 0 }}>
 							{offers.map((offer: any) => (
-								<Grid className="paper" key={offer.id} item xs={12} md={matchesQuery ? 6 : 4} pl={{ xs: 0, md: 2 }} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
-									<Paper elevation={0} sx={{ textAlign: "center", justifyContent: "center", pb: 5, minHeight: 200, backgroundColor: "whitesmoke", borderRadius: 4 }}>
+								<Grid className="paper" key={offer.id} item xs={12} sm={6} md={4} px={{ xs: 1, md: 0 }} pl={{ xs: 0, md: 2 }} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
+									<Paper elevation={0} sx={{ textAlign: "center", justifyContent: "center", pb: 0, minHeight: 140, backgroundColor: "whitesmoke", borderRadius: 4 }}>
 										<Box
 											component="img"
 											sx={{
 												width: 150,
 												maxWidth: { xs: 150, md: 150 },
+												marginTop: -10
 											}}
 											alt="Food"
 											src={offer?.image}
@@ -180,7 +153,7 @@ const Home = (props: any) => {
 					</Grid>
 				</Container>
 
-				<Container maxWidth={false} style={{ width: "100%", backgroundColor: "#111", margin: "6% 0% 0% 0%", padding: "4% 0% 4% 0%" }} >
+				<Container maxWidth={false} style={{ width: "100%", backgroundColor: "#111", margin: "6% 0% 0% 0%", padding: "6% 0% 6% 0%" }} >
 					<Container maxWidth='xl'>
 						<Grid container item spacing={4} sx={{ justifyContent: "space-between", alignItems: "center" }}>
 							<Grid container item justifyContent="center" xs={12} md={7} >
@@ -188,7 +161,9 @@ const Home = (props: any) => {
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#fc0330", borderRadius: 50, width: 45, color: "#fff" }}>
 										Gratuit
 									</Typography>
-									<h1 style={{ color: "#fff" }}>Plus de 100 Burgers offertent gratuitement tous les jours.</h1>
+									<Typography variant={matchesQuery ? "h3" :"h2"} sx={{ fontFamily: "circular", color: "white" }}>
+										Plus de 100 Burgers offertent gratuitement tous les jours.
+									</Typography>
 									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff" }}>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									</p>
@@ -344,7 +319,7 @@ const Home = (props: any) => {
 								Inscrivez-vous pour ne rien rater de Resto.
 							</p>
 							<input placeholder="Votre adresse email" style={{
-								display: "block", 
+								display: "block",
 								fontFamily: 'circular',
 								backgroundColor: '#191a1c',
 								borderRadius: 25,
@@ -377,7 +352,7 @@ const Home = (props: any) => {
 						</Stack>
 					</Grid>
 					<p style={{ textAlign: "center", color: "white", fontSize: 14, fontWeight: "500" }}>
-						Resto copyright 2022
+						Resto copyright {new Date().getFullYear()}
 					</p>
 				</Container>
 			</section>

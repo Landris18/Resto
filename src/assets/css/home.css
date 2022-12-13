@@ -4,15 +4,6 @@
     top: 0;
 }
 
-h1 {
-    font-size: 60px;
-    color: white;
-}
-
-h2 {
-    font-size: 30px;
-}
-
 .nav-item.active{
     text-align:center;
     padding-bottom:5px;
@@ -94,26 +85,5 @@ h2 {
 
     to {
         transform: rotate(359deg);
-    }
-}
-
-
-@media screen and (max-width: 1043px) {
-    h1 {
-        font-size: 35px;
-    }
-
-    .section-titre {
-        font-size: 30px;
-    }
-}
-
-@media screen and (max-width: 402px) {
-    h1 {
-        font-size: 30px;
-    }
-
-    .section-titre {
-        font-size: 30px;
     }
 }

@@ -151,7 +151,7 @@ const Navbar = (props: any) => {
                             {pages.map((page) => (
                                 <Link
                                     smooth spy
-                                    activeClass="nav-item active"
+                                    activeClass="nav-item"
                                     to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "reservation" : page === "Nous contacter" ? "footer" : "#"}
                                     key={page}
                                     duration={400}
