@@ -91,7 +91,7 @@ const Home = (props: any) => {
 			<section id="offres">
 				<Container maxWidth={false} style={{ width: "100%", padding: "2% 5% 0% 5% " }}>
 					<h2 style={{ color: "#222", textAlign: matchesQuery ? "center" : "start" }}>OFFRES SPECIALES</h2>
-					<Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
+					<Grid container item spacing={2} sx={{ justifyContent: "center", alignItems: "center" }}>
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
 							<Container maxWidth={false} >
 								<Box
@@ -161,10 +161,10 @@ const Home = (props: any) => {
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#fc0330", borderRadius: 50, width: 45, color: "#fff" }}>
 										Gratuit
 									</Typography>
-									<Typography variant={matchesQuery ? "h3" :"h2"} sx={{ fontFamily: "circular", color: "white" }}>
+									<Typography variant={matchesQuery ? "h3" :"h2"} sx={{ fontFamily: "circular", color: "white", mt: 2 }}>
 										Plus de 100 Burgers offertent gratuitement tous les jours.
 									</Typography>
-									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff" }}>
+									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff", lineHeight: 2 }}>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									</p>
 									<Button className="voir-plus" variant="outlined" sx={{ borderRadius: 50, color: "#fff", borderColor: "#fff", fontFamily: "circular", textTransform: "none" }}>
