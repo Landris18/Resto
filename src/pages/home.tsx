@@ -44,13 +44,12 @@ const Home = (props: any) => {
 		<>
 			<Container id="hero" sx={{ height: "100vh" }} maxWidth={false}>
 				<Navbar />
-				<Stack direction="column" maxWidth={{xs: "80%", md: "60%"}} justifyContent="end" sx={{ bgcolor: 'transparent', marginLeft: '8%' }}>
-					<Typography variant="h2" sx={{ fontFamily: "circular", color: "white", fontSize: {xs: "2.2rem", md: "3.5rem"} }} mt={{ md: "32vh", xs: "25vh" }}>
+				<Stack direction="column" maxWidth={{ xs: "80%", md: "60%" }} justifyContent="end" sx={{ bgcolor: 'transparent', marginLeft: '8%' }}>
+					<Typography variant="h2" sx={{ fontFamily: "circular", color: "white", fontSize: { xs: "2.2rem", md: "3.5rem" } }} mt={{ md: "32vh", xs: "25vh" }}>
 						Des menus que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
 					</Typography>
-					<Button className='button-reservation' endIcon={<ShoppingCartOutlinedIcon />} variant="contained"
+					<Button className='button-reservation' endIcon={<ShoppingCartOutlinedIcon />} variant="contained" disableElevation
 						sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", fontSize: "16px", width: "160px", backgroundColor: "#000", borderRadius: "50px" }}
-						disableElevation
 					>
 						Reservation
 					</Button>
@@ -63,14 +62,7 @@ const Home = (props: any) => {
 					<Grid container item spacing={2} my={5} sx={{ justifyContent: "center", alignItems: "center" }}>
 						<Grid container item xs={12} md={5}>
 							<Container maxWidth={false} style={{ textAlign: "center", }}>
-								<Box className="rotated-image" component="img"
-									sx={{
-										width: 300,
-										maxWidth: { xs: 250, md: 300 },
-									}}
-									alt="Food"
-									src={hero}
-								/>
+								<Box className="rotated-image" component="img" alt="Food" src={hero} sx={{ width: 300, maxWidth: { xs: 250, md: 300 } }} />
 							</Container>
 						</Grid>
 						<Grid container item xs={12} md={7}>
@@ -94,32 +86,13 @@ const Home = (props: any) => {
 					<Grid container item spacing={2} sx={{ justifyContent: "center", alignItems: "center" }}>
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
 							<Container maxWidth={false} >
-								<Box
-									component="img"
-									sx={{
-										width: 350,
-										maxWidth: { xs: 250, md: 350 },
-										borderRadius: 3
-									}}
-									alt="Food"
-									src={promotion}
-								/>
+								<Box component="img" src={promotion} alt="Food" sx={{ width: 350, maxWidth: { xs: 250, md: 350 }, borderRadius: 3 }} />
 								<h3>Burger King x4</h3>
 								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#000" }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
 								</p>
 								<h2 style={{ lineHeight: 0 }}>20 $</h2>
-								<Button className='button-reservation' endIcon={<EastIcon />} variant="contained"
-									sx={{
-										color: 'white',
-										fontFamily: "circular",
-										fontSize: "12px",
-										width: "190px",
-										backgroundColor: "#000",
-										borderRadius: "50px",
-									}}
-									disableElevation
-								>
+								<Button className='button-reservation' endIcon={<EastIcon />} variant="contained" disableElevation sx={{ color: 'white', fontFamily: "circular", fontSize: "12px", width: "190px", backgroundColor: "#000", borderRadius: "50px" }}>
 									Voir les autres
 								</Button>
 							</Container>
@@ -128,16 +101,7 @@ const Home = (props: any) => {
 							{offers.map((offer: any) => (
 								<Grid className="paper" key={offer.id} item xs={12} sm={6} md={4} px={{ xs: 1, md: 0 }} pl={{ xs: 0, md: 2 }} py={1} sx={{ justifyContent: "center", alignItems: "center", lignContents: "center" }}>
 									<Paper elevation={0} sx={{ textAlign: "center", justifyContent: "center", pb: 0, minHeight: 140, backgroundColor: "whitesmoke", borderRadius: 4 }}>
-										<Box
-											component="img"
-											sx={{
-												width: 150,
-												maxWidth: { xs: 150, md: 150 },
-												marginTop: -10
-											}}
-											alt="Food"
-											src={offer?.image}
-										/>
+										<Box component="img" src={offer?.image} alt="Food" sx={{ width: 150, maxWidth: { xs: 150, md: 150 }, marginTop: -10 }} />
 										<Container>
 											{offer?.name}
 										</Container>
@@ -161,7 +125,7 @@ const Home = (props: any) => {
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 2, backgroundColor: "#fc0330", borderRadius: 50, width: 45, color: "#fff" }}>
 										Gratuit
 									</Typography>
-									<Typography variant={matchesQuery ? "h3" :"h2"} sx={{ fontFamily: "circular", color: "white", mt: 2 }}>
+									<Typography variant={matchesQuery ? "h3" : "h2"} sx={{ fontFamily: "circular", color: "white", mt: 2 }}>
 										Plus de 100 Burgers offertent gratuitement tous les jours.
 									</Typography>
 									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff", lineHeight: 2 }}>
@@ -173,15 +137,7 @@ const Home = (props: any) => {
 								</Container>
 							</Grid>
 							<Grid container item justifyContent={{ xs: "center", md: "end" }} xs={12} md={5} >
-								<Box
-									component="img"
-									sx={{
-										width: 500,
-										maxWidth: { xs: 300, md: 500 },
-									}}
-									alt="Food"
-									src={burger}
-								/>
+								<Box component="img" src={burger} alt="Food" sx={{ width: 500, maxWidth: { xs: 300, md: 500 } }} />
 							</Grid>
 						</Grid>
 					</Container>
@@ -203,18 +159,8 @@ const Home = (props: any) => {
 						<Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
 							<FastfoodIcon sx={{ display: { md: 'inline' }, mr: 1, color: "white" }} />
 							<Typography
-								variant="h6"
-								noWrap
-								component="a"
-								sx={{
-									mr: 2,
-									display: { md: 'inline' },
-									fontFamily: 'circular',
-									fontWeight: 700,
-									letterSpacing: '.3rem',
-									color: 'white',
-									textDecoration: 'none',
-								}}
+								component="a" variant="h6" noWrap
+								sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, letterSpacing: '.3rem', color: 'white', textDecoration: 'none', }}
 							>
 								RESTO
 							</Typography>
@@ -224,17 +170,8 @@ const Home = (props: any) => {
 						</Grid>
 						<Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
 							<Typography
-								variant="h6"
-								noWrap
-								component="a"
-								sx={{
-									mr: 2,
-									display: { md: 'inline' },
-									fontFamily: 'circular',
-									fontWeight: 700,
-									color: '#edbb28',
-									textDecoration: 'none',
-								}}
+								component="a" variant="h6" noWrap
+								sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}
 							>
 								Nous contacter
 							</Typography>
@@ -245,89 +182,36 @@ const Home = (props: any) => {
 						</Grid>
 						<Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
 							<Typography
-								variant="h6"
-								noWrap
-								component="a"
-								sx={{
-									mr: 2,
-									display: { md: 'inline' },
-									fontFamily: 'circular',
-									fontWeight: 700,
-									color: '#edbb28',
-									textDecoration: 'none',
-								}}
+								component="a" variant="h6" noWrap
+								sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}
 							>
 								Navigations
 							</Typography>
-							<Link
-								smooth spy
-								duration={400}
-								offset={-90}
-								to="about"
-								style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}
-							>
+							<Link smooth spy duration={400} offset={-90} to="about" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
 								<ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
 								<h5 style={{ color: 'white', display: "inline" }}> A propos</h5>
 							</Link>
-							<Link
-								smooth spy
-								duration={400}
-								offset={-90}
-								to="offres"
-								style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}
-							>
+							<Link smooth spy duration={400} offset={-90} to="offres" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
 								<ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
 								<h5 style={{ color: 'white', display: "inline" }}> Offres spéciales</h5>
 							</Link>
-							<Link
-								smooth spy
-								duration={400}
-								to="menus"
-								style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}
-							>
+							<Link smooth spy duration={400} offset={-90} to="menus" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
 								<ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
 								<h5 style={{ color: 'white', display: "inline" }}> Menus</h5>
 							</Link>
-							<Link
-								smooth spy
-								duration={400}
-								offset={-90}
-								to="reservation"
-								style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}
-							>
+							<Link smooth spy duration={400} offset={-90} to="reservation" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
 								<ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
 								<h5 style={{ color: 'white', display: "inline" }}> Réservation</h5>
 							</Link>
 						</Grid>
 						<Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
-							<Typography
-								variant="h6"
-								noWrap
-								component="a"
-								sx={{
-									mr: 2,
-									display: { md: 'inline' },
-									fontFamily: 'circular',
-									fontWeight: 700,
-									color: '#edbb28',
-									textDecoration: 'none',
-								}}
-							>
+							<Typography variant="h6" noWrap component="a" sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none', }}>
 								Newsletter
 							</Typography>
 							<p style={{ color: "white", fontSize: 14, fontWeight: "500" }}>
 								Inscrivez-vous pour ne rien rater de Resto.
 							</p>
-							<input placeholder="Votre adresse email" style={{
-								display: "block",
-								fontFamily: 'circular',
-								backgroundColor: '#191a1c',
-								borderRadius: 25,
-								paddingLeft: 20,
-								border: 'none',
-								color: '#fff',
-								height: 35
-							}} />
+							<input placeholder="Votre adresse email" style={{ display: "block", fontFamily: 'circular', backgroundColor: '#191a1c', borderRadius: 25, paddingLeft: 20, border: 'none', color: '#fff', height: 35 }} />
 							<Fab variant="extended" sx={{ boxShadow: "none", height: 30, fontFamily: "circular", textTransform: "capitalize", marginTop: 1.5 }}>
 								<SendIcon sx={{ mr: 1, fontSize: 15 }} />
 								Envoyer
@@ -358,11 +242,7 @@ const Home = (props: any) => {
 			</section>
 
 			<ScrollToTop {...props}>
-				<Link
-					smooth spy
-					duration={400}
-					style={{ textDecoration: "none" }}
-					to="hero">
+				<Link smooth spy duration={400} style={{ textDecoration: "none" }} to="hero">
 					<Fab sx={{ backgroundColor: "#edbb28" }} size="small" aria-label="scroll back to top">
 						<KeyboardArrowUpIcon />
 					</Fab>

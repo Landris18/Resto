@@ -59,26 +59,11 @@ const Navbar = (props: any) => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
+                        {/* Header desktop            */}
                         <FastfoodIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="/"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'none', md: 'flex' },
-                                fontFamily: 'circular',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
-                        >
+                        <Typography variant="h6" noWrap component="a" href="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'circular', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
                             RESTO
                         </Typography>
-
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                             <IconButton
                                 size="large"
@@ -118,33 +103,16 @@ const Navbar = (props: any) => {
                                         offset={-90}
                                     >
                                         <MenuItem >
-                                            <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize:14 }}>{page}</Typography>
-
+                                            <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize: 14 }}>{page}</Typography>
                                         </MenuItem>
-
                                     </Link>
                                 ))}
                             </Menu>
                         </Box>
 
+                        {/* Header mobile            */}
                         <FastfoodIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href=""
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'flex', md: 'none' },
-                                flexGrow: 1,
-                                fontFamily: 'circular',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
-                        >
+                        <Typography variant="h5" noWrap component="a" href="" sx={{ mr: 2, display: { xs: 'flex', md: 'none' }, flexGrow: 1, fontFamily: 'circular', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
                             RESTO
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center" }} >
@@ -157,17 +125,14 @@ const Navbar = (props: any) => {
                                     duration={400}
                                     offset={-90}
                                     style={{ textDecoration: "none", justifyContent: "center" }}>
-                                    <Box
-                                        component="h5"
-                                        onClick={handleCloseNavMenu}
-                                        sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}
-                                    >
+                                    <Box component="h5" onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}>
                                         {page}
                                     </Box>
                                 </Link>
                             ))}
                         </Box>
 
+                        {/* Menu profile */}
                         <Box sx={{ flexGrow: 0 }}>
                             <ThemeProvider theme={theme}>
                                 <Tooltip title="Compe administrateur" style={{ fontFamily: "circular" }}>
@@ -194,7 +159,7 @@ const Navbar = (props: any) => {
                             >
                                 {settings.map((setting) => (
                                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize:14 }}>{setting} </Typography>
+                                        <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize: 14 }}>{setting} </Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
