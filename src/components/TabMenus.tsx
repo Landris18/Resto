@@ -35,7 +35,7 @@ const TabPanel = (props: TabPanelProps) => {
                 <Stack direction="row" py={1} className="slider">
                     <div className="slide-track">
                         {
-                            Array.from(Array(15)).map((menu, index) => (
+                            Array.from(Array(14)).map((menu, index) => (
                                 <div key={index} className="slide">
                                     <CardMenu />
                                 </div>
