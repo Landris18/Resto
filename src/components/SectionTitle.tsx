@@ -10,7 +10,7 @@ const SectionTitle = (props : any) => {
             </h1>
         </>
     )
-}
+};
 
 
 export default SectionTitle;

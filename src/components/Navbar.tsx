@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,7 +14,7 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { createTheme, ThemeProvider } from '@mui/material';
 import avatar from '../assets/images/landry.jpeg';
 import { Link } from 'react-scroll';
-import { ElevationScroll } from './scrolls';
+import { ElevationScroll } from './Scrolls';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];

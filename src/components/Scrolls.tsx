@@ -16,7 +16,7 @@ export const ScrollToTop = (props: any) => {
             </Box>
         </Fade>
     );
-}
+};
 
 
 export const ElevationScroll = (props: any) => {
@@ -30,4 +30,4 @@ export const ElevationScroll = (props: any) => {
     return React.cloneElement(children, {
         style: { backgroundColor: trigger ? "black" : "transparent", boxShadow: "none" }
     });
-}
+};
