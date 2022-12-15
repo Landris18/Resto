@@ -6,7 +6,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import "dayjs/locale/fr";
-import "../assets/scss/reservation-form.scss";
+import "../assets/scss/reservation.scss";
 import { Fab, styled, Typography } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 

@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import promotion from '../assets/images/promotion.png';
 import Stack from '@mui/material/Stack';
-import "../assets/scss/slider.scss";
+import "../assets/scss/tab-menu.scss";
 
 
 export default function CardMenu() {
