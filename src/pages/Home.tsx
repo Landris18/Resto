@@ -9,7 +9,7 @@ import burger from '../assets/images/burger.png';
 import { getSpeciallOffers } from '../services';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import EditIcon from '@mui/icons-material/Edit';
 import { Link } from 'react-scroll';
 import { ScrollToTop } from '../components/Scrolls';
 import Footer from '../components/Footer';
@@ -39,7 +39,7 @@ const Home = (props: any) => {
 					<Typography variant="h2" sx={{ fontFamily: "circular", color: "white", fontSize: { xs: "2.2rem", md: "3.5rem" } }} mt={{ md: "32vh", xs: "25vh" }}>
 						Des menus que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
 					</Typography>
-					<Button className='button-reservation' endIcon={<ShoppingCartOutlinedIcon />} variant="contained" disableElevation
+					<Button className='button-reservation' endIcon={<EditIcon />} variant="contained" disableElevation
 						sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", fontSize: "16px", width: "160px", backgroundColor: "#000", borderRadius: "50px" }}
 					>
 						Reservation
@@ -78,7 +78,7 @@ const Home = (props: any) => {
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
 							<Container maxWidth={false} >
 								<Box component="img" src={promotion} alt="Food" sx={{ width: 350, maxWidth: { xs: 250, md: 350 }, borderRadius: 3 }} />
-								<h3>Burger King x4</h3>
+								<h3>Burger Tasty King</h3>
 								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#000" }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
 								</p>

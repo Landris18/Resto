@@ -98,7 +98,7 @@ const Navbar = (props: any) => {
                                         key={page}
                                         onClick={handleCloseNavMenu}
                                         smooth spy
-                                        to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "reservation" : page === "Nous contacter" ? "footer" : "#"}
+                                        to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "footer" : page === "Nous contacter" ? "footer" : "#"}
                                         duration={400}
                                         offset={-90}
                                     >
@@ -120,7 +120,7 @@ const Navbar = (props: any) => {
                                 <Link
                                     smooth spy
                                     activeClass="nav-item"
-                                    to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "reservation" : page === "Nous contacter" ? "footer" : "#"}
+                                    to={page === "A propos" ? "about" : page === "Offres spéciales" ? "offres" : page === "Menus" ? "menus" : page === "Réservation" ? "footer" : page === "Nous contacter" ? "footer" : "#"}
                                     key={page}
                                     duration={400}
                                     offset={-90}

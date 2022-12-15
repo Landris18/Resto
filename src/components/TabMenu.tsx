@@ -26,8 +26,6 @@ const StyledTab = styled(Tab)({
 const TabPanel = (props: TabPanelProps) => {
     const { children, value, index, stopped, ...other } = props;
 
-    console.log(stopped);
-
     return (
         <div
             role="tabpanel"

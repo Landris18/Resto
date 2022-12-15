@@ -1,0 +1,44 @@
+.MuiFormLabel-root {
+    font-family: "circular" !important;
+    color: #edbb28 !important;
+}
+
+.date-picker fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: white;
+}
+
+fieldset {
+    border-color: #edbb28 !important;
+}
+
+.MuiOutlinedInput-root{
+    font-family: "circular" !important;
+}
+
+.date-picker .Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: #edbb28;
+}
+
+.MuiPickersDay-root {
+    font-family: "circular" !important;
+    font-size: 15px !important;
+}
+
+.MuiPickersDay-today {
+    background-color: #edbb28 !important;
+}
+
+.MuiPickersCalendarHeader-label{
+    font-family: "circular" !important;
+    font-size: 15px;
+}
+
+.PrivatePickersYear-yearButton {
+    font-family: "circular" !important;
+    font-size: 15px;
+}
+
+.MuiDayPicker-weekDayLabel {
+    font-family: "circular" !important;
+    font-size: 15px;
+}

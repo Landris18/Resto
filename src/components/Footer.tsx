@@ -1,7 +1,7 @@
 import { Container, Fab, Grid, Stack, Typography } from '@mui/material';
 import { Link } from 'react-scroll';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
-import SendIcon from '@mui/icons-material/Send';
+import EditIcon from '@mui/icons-material/Edit';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,6 +9,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import DateTimePicker from './DateTimePicker';
 
 
 const Footer = () => {
@@ -46,34 +47,34 @@ const Footer = () => {
                     >
                         Navigations
                     </Typography>
-                    <Link smooth spy duration={400} offset={-90} to="about" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
+                    <Link smooth spy duration={400} offset={-90} to="about" style={{ lineHeight: 2.5, display: "block" }}>
                         <ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
-                        <h5 style={{ color: 'white', display: "inline" }}> A propos</h5>
+                        <h5 style={{ color: 'white', display: "inline", cursor: "pointer" }}> A propos</h5>
                     </Link>
-                    <Link smooth spy duration={400} offset={-90} to="offres" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
+                    <Link smooth spy duration={400} offset={-90} to="offres" style={{ lineHeight: 2.5, display: "block" }}>
                         <ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
-                        <h5 style={{ color: 'white', display: "inline" }}> Offres spéciales</h5>
+                        <h5 style={{ color: 'white', display: "inline", cursor: "pointer" }}> Offres spéciales</h5>
                     </Link>
-                    <Link smooth spy duration={400} offset={-90} to="menus" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
+                    <Link smooth spy duration={400} offset={-90} to="menus" style={{ lineHeight: 2.5, display: "block" }}>
                         <ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
-                        <h5 style={{ color: 'white', display: "inline" }}> Menus</h5>
+                        <h5 style={{ color: 'white', display: "inline", cursor: "pointer" }}> Menus</h5>
                     </Link>
-                    <Link smooth spy duration={400} offset={-90} to="reservation" style={{ lineHeight: 2.5, display: "block", cursor: "pointer" }}>
+                    <Link smooth spy duration={400} offset={-90} to="reservation" style={{ lineHeight: 2.5, display: "block" }}>
                         <ArrowForwardIosIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 12 }} />
-                        <h5 style={{ color: 'white', display: "inline" }}> Réservation</h5>
+                        <h5 style={{ color: 'white', display: "inline", cursor: "pointer" }}> Réservation</h5>
                     </Link>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
                     <Typography variant="h6" noWrap component="a" sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none', }}>
-                        Newsletter
+                        Reservation
                     </Typography>
                     <p style={{ color: "white", fontSize: 14, fontWeight: "500" }}>
-                        Inscrivez-vous pour ne rien rater de Resto.
+                        Réserver dès maintenant une table.
                     </p>
-                    <input placeholder="Votre adresse email" style={{ display: "block", fontFamily: 'circular', backgroundColor: '#191a1c', borderRadius: 25, paddingLeft: 20, border: 'none', color: '#fff', height: 35 }} />
-                    <Fab variant="extended" sx={{ boxShadow: "none", height: 30, fontFamily: "circular", textTransform: "capitalize", marginTop: 1.5 }}>
-                        <SendIcon sx={{ mr: 1, fontSize: 15 }} />
-                        Envoyer
+                    <DateTimePicker />
+                    <Fab variant="extended" sx={{ boxShadow: "none", height: 35, borderRadius: 0.5,  fontFamily: "circular", textTransform: "capitalize", marginTop: 2 }}>
+                        <EditIcon sx={{ mr: 1, fontSize: 15 }} />
+                        Réserver
                     </Fab>
                 </Grid>
             </Grid>
@@ -95,7 +96,7 @@ const Footer = () => {
                 </Stack>
             </Grid>
             <p style={{ textAlign: "center", color: "white", fontSize: 14, fontWeight: "500" }}>
-                Resto copyright {new Date().getFullYear()}
+                Landris18 copyright {new Date().getFullYear()}
             </p>
         </Container>
     )
