@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import { Stack, Fab } from '@mui/material';
 import Box from '@mui/material/Box';
 import { styled } from "@mui/material/styles";
-import "../assets/scss/slider.scss";
+import "../assets/scss/tab-menu.scss";
 import CardMenu from './CardMenu';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';

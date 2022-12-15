@@ -1,7 +1,6 @@
 import { Container, Fab, Grid, Stack, Typography } from '@mui/material';
 import { Link } from 'react-scroll';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
-import EditIcon from '@mui/icons-material/Edit';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,7 +8,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import DateTimePicker from './DateTimePicker';
+import Reservation from './Reservation';
 
 
 const Footer = () => {
@@ -18,10 +17,7 @@ const Footer = () => {
             <Grid container rowSpacing={4}>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
                     <FastfoodIcon sx={{ display: { md: 'inline' }, mr: 1, color: "white" }} />
-                    <Typography
-                        component="a" variant="h6" noWrap
-                        sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, letterSpacing: '.3rem', color: 'white', textDecoration: 'none', }}
-                    >
+                    <Typography component="a" variant="h6" noWrap sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, letterSpacing: '.3rem', color: 'white', textDecoration: 'none', }}>
                         RESTO
                     </Typography>
                     <p style={{ color: "white", fontSize: 14, fontWeight: "500", lineHeight: 1.7, width: "80%" }}>
@@ -29,10 +25,7 @@ const Footer = () => {
                     </p>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
-                    <Typography
-                        component="a" variant="h6" noWrap
-                        sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}
-                    >
+                    <Typography component="a" variant="h6" noWrap sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}>
                         Nous contacter
                     </Typography>
                     <div style={{ lineHeight: 2.5 }}> <LocationOnIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> Antananarivo 101, Madagascar</h5></div>
@@ -41,10 +34,7 @@ const Footer = () => {
                     <div style={{ lineHeight: 2.5 }}> <PhoneIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> 0326912919</h5></div>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
-                    <Typography
-                        component="a" variant="h6" noWrap
-                        sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}
-                    >
+                    <Typography component="a" variant="h6" noWrap sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}>
                         Navigations
                     </Typography>
                     <Link smooth spy duration={400} offset={-90} to="about" style={{ lineHeight: 2.5, display: "block" }}>
@@ -65,17 +55,10 @@ const Footer = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
-                    <Typography variant="h6" noWrap component="a" sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none', }}>
-                        Reservation
+                    <Typography variant="h6" noWrap component="a" sx={{ mr: 2, display: { md: 'inline' }, fontFamily: 'circular', fontWeight: 700, color: '#edbb28', textDecoration: 'none' }}>
+                        Faire une reservation
                     </Typography>
-                    <p style={{ color: "white", fontSize: 14, fontWeight: "500" }}>
-                        Réserver dès maintenant une table.
-                    </p>
-                    <DateTimePicker />
-                    <Fab variant="extended" sx={{ boxShadow: "none", height: 35, borderRadius: 0.5,  fontFamily: "circular", textTransform: "capitalize", marginTop: 2 }}>
-                        <EditIcon sx={{ mr: 1, fontSize: 15 }} />
-                        Réserver
-                    </Fab>
+                    <Reservation />
                 </Grid>
             </Grid>
             <Grid container sx={{ justifyContent: "center", alignItems: "center" }} mt={5}>
