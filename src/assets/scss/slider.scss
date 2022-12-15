@@ -45,6 +45,11 @@ $animationSpeed: 40s;
 		display: flex;
 		width: calc(250px * 14);
 	}
+
+	.slide-track-stopped {
+		display: flex;
+		width: calc(250px * 14);
+	}
 	
 	.slide {
 		width: 250px;

@@ -13,7 +13,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-scroll';
 import { ScrollToTop } from '../components/Scrolls';
 import Footer from '../components/Footer';
-import TabMenus from '../components/TabMenus';
+import TabMenu from '../components/TabMenu';
 
 
 const Home = (props: any) => {
@@ -145,7 +145,7 @@ const Home = (props: any) => {
 					<p style={{ textAlign: "center", color: "#222", fontSize: 16, fontFamily: "Josefin Sans, circular", fontWeight: "500" }}>
 						Tous les menus listés ici sont disponibles, réserver une table dès maintenant pour les savourer.
 					</p>
-					<TabMenus />
+					<TabMenu />
 				</Container>
 			</section>
 
