@@ -63,7 +63,7 @@ const Home = (props: any) => {
 								</Typography>
 								<h2 style={{ color: "#e7b10c" }}>Le meilleur restaurant de fast food de l'océan indien, c'est ici.</h2>
 								<p style={{ lineHeight: 1.7, color: "#000", fontSize: 16, fontFamily: "Josefin Sans, circular", fontWeight: "500" }}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque placerat ut. Nulla ut elit auctor ipsum tincidunt interdum non sed nunc. Donec mollis, justo in ullamcorper luctus, magna velit posuere tortor, vel suscipit libero orci vitae orci.
+									Are you tired of the same old dining options? Look no further! Our restaurant offers a unique dining experience with a menu that features a mix of classic and contemporary dishes. Our skilled chefs use only the freshest ingredients to create mouth-watering dishes that are sure to satisfy your taste buds. In addition to our delicious food, we also offer a comfortable and inviting atmosphere that is perfect for a casual dinner with friends or a special occasion. So, don't wait, make a reservation today and treat yourself to an unforgettable dining experience.
 								</p>
 							</Container>
 						</Grid>
@@ -80,7 +80,7 @@ const Home = (props: any) => {
 								<Box component="img" src={promotion} alt="Food" sx={{ width: 350, maxWidth: { xs: 250, md: 350 }, borderRadius: 3 }} />
 								<h3>Burger Tasty King</h3>
 								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#000" }}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum enim tortor, sit amet egestas neque.
+									Burger Tasty King est notre meilleur offre actuellement.
 								</p>
 								<h2 style={{ lineHeight: 0 }}>50 $</h2>
 								<Link smooth spy duration={400} offset={-90} to="menus">
@@ -122,7 +122,7 @@ const Home = (props: any) => {
 										Plus de 100 Burgers offertent gratuitement tous les jours.
 									</Typography>
 									<p style={{ fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#fff", lineHeight: 2 }}>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Votre présence sera toujours récompenser.
 									</p>
 									<Link smooth spy duration={400} offset={-90} to="menus">
 										<Button className="voir-plus" variant="outlined" sx={{ borderRadius: 50, color: "#fff", borderColor: "#fff", fontFamily: "circular", textTransform: "none" }}>
