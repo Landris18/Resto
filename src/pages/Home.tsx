@@ -63,7 +63,7 @@ const Home = (props: any) => {
 								</Typography>
 								<h2 style={{ color: "#e7b10c" }}>Le meilleur restaurant de fast food de l'océan indien, c'est ici.</h2>
 								<p style={{ lineHeight: 1.7, color: "#000", fontSize: 16, fontFamily: "Josefin Sans, circular", fontWeight: "500" }}>
-									Are you tired of the same old dining options? Look no further! Our restaurant offers a unique dining experience with a menu that features a mix of classic and contemporary dishes. Our skilled chefs use only the freshest ingredients to create mouth-watering dishes that are sure to satisfy your taste buds. In addition to our delicious food, we also offer a comfortable and inviting atmosphere that is perfect for a casual dinner with friends or a special occasion. So, don't wait, make a reservation today and treat yourself to an unforgettable dining experience.
+									Are you tired of the same old dining options? Look no further! Our restaurant offers a unique dining experience with a menu that features a mix of classic and contemporary dishes. Our skilled chefs use only the freshest ingredients to create mouth-watering dishes that are sure to satisfy your taste buds. So, don't wait, make a reservation today and treat yourself to an unforgettable dining experience.
 								</p>
 							</Container>
 						</Grid>
