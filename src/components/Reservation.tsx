@@ -2,6 +2,7 @@ import * as React from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
@@ -21,6 +22,15 @@ const Input = styled(TextField)(({ theme }) => ({
 }));
 
 
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: '#edbb28'
+		}
+	}
+});
+
+
 export default function Reservation() {
 	const [value, setValue] = React.useState<Dayjs | null>(
 		dayjs(new Date()),
@@ -33,11 +43,11 @@ export default function Reservation() {
 	const color = "white";
 
 	return (
-		<>
+		<ThemeProvider theme={theme}>
 			<Typography sx={{ color: "white", fontSize: 14, fontWeight: "500", fontFamily: "circular", mt: 2 }}>
 				Réserver dès maintenant une table.
 			</Typography>
-			<LocalizationProvider adapterLocale="fr" dateAdapter={AdapterDayjs}>
+			<LocalizationProvider adapterLocale="fr" dateAdapter={AdapterDayjs} >
 				<Stack direction="column" marginTop={3} spacing={3}>
 					<DateTimePicker
 						label="Date de reservation"
@@ -82,6 +92,6 @@ export default function Reservation() {
 				<EditIcon sx={{ mr: 1, fontSize: 15 }} />
 				Réserver
 			</Fab>
-		</>
+		</ThemeProvider>
 	);
 };

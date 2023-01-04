@@ -78,11 +78,17 @@ const Home = (props: any) => {
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
 							<Container maxWidth={false} >
 								<Box component="img" src={promotion} alt="Food" sx={{ width: 350, maxWidth: { xs: 250, md: 350 }, borderRadius: 3 }} />
-								<h3>Burger Tasty King</h3>
-								<p style={{ lineHeight: 1.5, fontFamily: "Josefin Sans, circular", fontSize: 15, color: "#000" }}>
+								<Stack direction="row" alignItems={"center"} spacing={1} textAlign={"center"} justifyContent={{xs: "center", md :"start"}}>
+									<h3 style={{lineHeight : 1}}>
+										Burger Tasty King
+									</h3>
+									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 1, backgroundColor: "#edbb28", borderRadius: 50, width: 40 }}>
+										50 $
+									</Typography>
+								</Stack>
+								<p style={{ lineHeight: 1.3, fontFamily: "circular", fontSize: 15, color: "#000", marginTop: -2 }}>
 									Burger Tasty King est notre meilleur offre actuellement.
 								</p>
-								<h2 style={{ lineHeight: 0 }}>50 $</h2>
 								<Link smooth spy duration={400} offset={-90} to="menus">
 									<Button className='button-reservation' endIcon={<EastIcon />} variant="contained" disableElevation sx={{ color: 'white', fontFamily: "circular", fontSize: "12px", width: "190px", backgroundColor: "#000", borderRadius: "50px" }}>
 										Voir les autres
