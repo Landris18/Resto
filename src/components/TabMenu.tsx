@@ -8,6 +8,7 @@ import "../assets/scss/tab-menu.scss";
 import CardMenu from './CardMenu';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
+import { pastries, starters } from '../services/data';
 
 
 interface TabPanelProps {
@@ -26,6 +27,8 @@ const StyledTab = styled(Tab)({
 const TabPanel = (props: TabPanelProps) => {
     const { children, value, index, stopped, ...other } = props;
 
+    const data = index === 2 ? pastries : starters;
+
     return (
         <div
             role="tabpanel"
@@ -38,9 +41,13 @@ const TabPanel = (props: TabPanelProps) => {
                 <Stack direction="row" py={1} className="slider">
                     <div className={stopped ? "slide-track-stopped" : "slide-track"}>
                         {
-                            Array.from(Array(14)).map((menu, index) => (
+                            data.map((menu, index) => (
                                 <div key={index} className="slide">
-                                    <CardMenu />
+                                    <CardMenu
+                                        name={menu.name}
+                                        price={menu.price}
+                                        image={menu.image}
+                                    />
                                 </div>
                             ))
                         }
@@ -63,7 +70,7 @@ export default function TabMenu() {
     const [value, setValue] = React.useState(0);
     const [isStop, setIsStop] = React.useState(false);
 
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
 
@@ -93,8 +100,12 @@ export default function TabMenu() {
             <Stack direction={"row"} sx={{ marginTop: 1.5, justifyContent: "center" }}>
                 <Fab sx={{ backgroundColor: "#edbb28", boxShadow: "none" }} size="medium" aria-label="scroll back to top" onClick={() => { handleStop() }}>
                     {
-                        isStop ? <PlayArrowIcon sx={{ fontSize: 25, color: "#fff" }} /> :
-                            <PauseIcon sx={{ fontSize: 25, color: "#fff" }} />
+                        isStop ? (
+                            <PlayArrowIcon sx={{ fontSize: 25, color: "#fff" }} />
+                        ) :
+                            (
+                                <PauseIcon sx={{ fontSize: 25, color: "#fff" }} />
+                            )
                     }
                 </Fab>
             </Stack>
