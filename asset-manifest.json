@@ -1,23 +1,37 @@
 {
   "files": {
     "main.css": "/Resto/static/css/main.77511dec.css",
-    "main.js": "/Resto/static/js/main.0705f7b9.js",
+    "main.js": "/Resto/static/js/main.fef595dd.js",
     "static/js/787.e5adab6e.chunk.js": "/Resto/static/js/787.e5adab6e.chunk.js",
+    "static/media/starter4.png": "/Resto/static/media/starter4.e96dd1eb50270684b6aa.png",
+    "static/media/starter6.png": "/Resto/static/media/starter6.60208953e7fff7c551eb.png",
+    "static/media/pastrie2.png": "/Resto/static/media/pastrie2.1fc3b639af7551e513d0.png",
+    "static/media/starter1.png": "/Resto/static/media/starter1.706ca3dfe967d7872cb9.png",
     "static/media/offer1.png": "/Resto/static/media/offer1.9c9336552e8a3765e0a2.png",
+    "static/media/starter3.png": "/Resto/static/media/starter3.14e83bfc763d44b48e26.png",
     "static/media/hero.png": "/Resto/static/media/hero.fac19e0f2cbb5be17b6c.png",
     "static/media/burger.png": "/Resto/static/media/burger.c6350b4425f362ab9e43.png",
+    "static/media/pastrie4.png": "/Resto/static/media/pastrie4.7718e04957c7ef5f8fbf.png",
+    "static/media/pastrie7.png": "/Resto/static/media/pastrie7.fd1d13ab69267f7640a4.png",
+    "static/media/pastrie5.png": "/Resto/static/media/pastrie5.306e167207f0a33a2e42.png",
+    "static/media/pastrie3.png": "/Resto/static/media/pastrie3.1bde3f890c5deb6707ef.png",
     "static/media/promotion.png": "/Resto/static/media/promotion.e4c0b443dc08abe23bc8.png",
-    "static/media/offer6.png": "/Resto/static/media/offer6.c6a4eecfba6a285174fe.png",
+    "static/media/starter5.png": "/Resto/static/media/starter5.c5aa1056c52a4e1e79ec.png",
+    "static/media/offer2.png": "/Resto/static/media/offer2.c6a4eecfba6a285174fe.png",
+    "static/media/starter7.png": "/Resto/static/media/starter7.50c612cefaf8b9e9a10c.png",
+    "static/media/starter2.png": "/Resto/static/media/starter2.1818e0a55e04011d2e3d.png",
+    "static/media/pastrie1.png": "/Resto/static/media/pastrie1.f753046999000fe0beb5.png",
     "static/media/hero-bg.jpg": "/Resto/static/media/hero-bg.891f6b4c95d71357cc1b.jpg",
+    "static/media/pastrie6.png": "/Resto/static/media/pastrie6.16216c8ed24568875345.png",
     "static/media/CircularStdBold.woff": "/Resto/static/media/CircularStdBold.1df69deaee53a33837f1.woff",
     "static/media/landry.jpeg": "/Resto/static/media/landry.2629454b13b71e3e01df.jpeg",
     "index.html": "/Resto/index.html",
     "main.77511dec.css.map": "/Resto/static/css/main.77511dec.css.map",
-    "main.0705f7b9.js.map": "/Resto/static/js/main.0705f7b9.js.map",
+    "main.fef595dd.js.map": "/Resto/static/js/main.fef595dd.js.map",
     "787.e5adab6e.chunk.js.map": "/Resto/static/js/787.e5adab6e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77511dec.css",
-    "static/js/main.0705f7b9.js"
+    "static/js/main.fef595dd.js"
   ]
 }
