@@ -98,13 +98,13 @@ export default function TabMenu() {
             <TabPanel value={value} index={1} stopped={isStop} />
             <TabPanel value={value} index={2} stopped={isStop} />
             <Stack direction={"row"} sx={{ marginTop: 1.5, justifyContent: "center" }}>
-                <Fab sx={{ backgroundColor: "#edbb28", boxShadow: "none" }} size="medium" aria-label="scroll back to top" onClick={() => { handleStop() }}>
+                <Fab sx={{ backgroundColor: "#edbb28", boxShadow: "none" }} size="medium" onClick={() => { handleStop() }}>
                     {
                         isStop ? (
-                            <PlayArrowIcon sx={{ fontSize: 25, color: "#fff" }} />
+                            <PlayArrowIcon className={"play-pause"} sx={{ fontSize: 25, color: "#fff" }} />
                         ) :
                             (
-                                <PauseIcon sx={{ fontSize: 25, color: "#fff" }} />
+                                <PauseIcon className={"play-pause"} sx={{ fontSize: 25, color: "#fff" }} />
                             )
                     }
                 </Fab>
