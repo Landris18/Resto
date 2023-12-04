@@ -55,9 +55,9 @@ const Navbar = (props: any) => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = (url: string) => {
+    const handleCloseUserMenu = (url?: string) => {
         setAnchorElUser(null);
-        window.open(url, "_blank")
+        if (url) window.open(url, "_blank");
     };
 
     return (
@@ -166,7 +166,7 @@ const Navbar = (props: any) => {
                                     horizontal: 'right',
                                 }}
                                 open={Boolean(anchorElUser)}
-                                onClose={handleCloseUserMenu}
+                                onClose={() => handleCloseUserMenu()}
                             >
                                 {settings.map((setting) => (
                                     <MenuItem key={setting.name} onClick={() => handleCloseUserMenu(setting.url)}>
