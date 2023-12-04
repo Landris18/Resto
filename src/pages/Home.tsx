@@ -86,7 +86,7 @@ const Home = (props: any) => {
 										50 $
 									</Typography>
 								</Stack>
-								<p style={{ lineHeight: 1.3, fontFamily: "circular", fontSize: 15, color: "#000", marginTop: -2 }}>
+								<p style={{ lineHeight: 1.3, fontFamily: "circular", fontSize: 15, color: "#000", marginTop: 10 }}>
 									Burger Tasty King est notre meilleur offre actuellement.
 								</p>
 								<Link smooth spy duration={400} offset={-90} to="menus">

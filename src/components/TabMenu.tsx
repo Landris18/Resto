@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import "../assets/scss/tab-menu.scss";
 import CardMenu from './CardMenu';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from '@mui/icons-material/Pause';
+import ReplayIcon from '@mui/icons-material/Replay';
 import { pastries, starters } from '../services/data';
 
 
@@ -68,7 +68,7 @@ function a11yProps(index: number) {
 
 export default function TabMenu() {
     const [value, setValue] = React.useState(0);
-    const [isStop, setIsStop] = React.useState(false);
+    const [isStop, setIsStop] = React.useState(true);
 
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -104,7 +104,7 @@ export default function TabMenu() {
                             <PlayArrowIcon className={"play-pause"} sx={{ fontSize: 25, color: "#fff" }} />
                         ) :
                             (
-                                <PauseIcon className={"play-pause"} sx={{ fontSize: 25, color: "#fff" }} />
+                                <ReplayIcon className={"play-pause"} sx={{ fontSize: 25, color: "#fff" }} />
                             )
                     }
                 </Fab>

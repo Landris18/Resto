@@ -30,7 +30,7 @@ const Footer = () => {
                     </Typography>
                     <div style={{ lineHeight: 2.5 }}> <LocationOnIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> Antananarivo 101, Madagascar</h5></div>
                     <div style={{ lineHeight: 2.5 }}> <EmailIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> landry.aps@gmail.com</h5></div>
-                    <div style={{ lineHeight: 2.5 }}> <EmailIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> landry.manankoraisina@esti.mg</h5></div>
+                    <div style={{ lineHeight: 2.5 }}> <EmailIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> landry.manankoraisina.rasendranirina@esti.mg</h5></div>
                     <div style={{ lineHeight: 2.5 }}> <PhoneIcon sx={{ color: 'white', display: { md: 'inline' }, fontSize: 16 }} /> <h5 style={{ color: 'white', display: "inline" }}> 0326912919</h5></div>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3} justifyContent="start" px={4}>
@@ -87,4 +87,3 @@ const Footer = () => {
 
 
 export default Footer;
-

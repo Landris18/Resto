@@ -15,11 +15,17 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import avatar from '../assets/images/landry.jpeg';
 import { Link } from 'react-scroll';
 import { ElevationScroll } from './Scrolls';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 const pages = ['A propos', 'Offres spéciales', 'Menus', 'Réservation', "Nous contacter"];
-const settings = ['Profile', 'Dashboard', 'Se déconnecter'];
-
+const settings = [
+    { name: "Linkedin", icon: <LinkedInIcon fontSize='small' /> },
+    { name: "Facebook", icon: <FacebookIcon fontSize='small' /> },
+    { name: "Github", icon: <GitHubIcon fontSize='small' /> }
+];
 
 const theme = createTheme({
     components: {
@@ -135,7 +141,7 @@ const Navbar = (props: any) => {
                         {/* Menu profile */}
                         <Box sx={{ flexGrow: 0 }}>
                             <ThemeProvider theme={theme}>
-                                <Tooltip title="Compe administrateur" style={{ fontFamily: "circular" }}>
+                                <Tooltip title="Landry Manankoraisina" style={{ fontFamily: "circular" }}>
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                         <Avatar alt="Avatar" src={avatar} />
                                     </IconButton>
@@ -158,8 +164,10 @@ const Navbar = (props: any) => {
                                 onClose={handleCloseUserMenu}
                             >
                                 {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize: 14 }}>{setting} </Typography>
+                                    <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center" sx={{ fontFamily: "circular", fontSize: 14 }} alignItems={"center"} display={"flex"} columnGap={0.8}>
+                                            {setting.icon} {setting.name}
+                                        </Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
