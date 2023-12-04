@@ -4,15 +4,12 @@ import Home from '../pages/Home';
 
 const App = () => {
 	return (
-		<>
-			<Router basename="/Resto">
-				<Routes>
-					<Route path="/" element={<Home />} />
-				</Routes>
-			</Router>
-		</>
+		<Router basename="/Resto">
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+		</Router>
 	);
 };
-
 
 export default App;

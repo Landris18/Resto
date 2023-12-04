@@ -39,11 +39,13 @@ const Home = (props: any) => {
 					<Typography variant="h2" sx={{ fontFamily: "circular", color: "white", fontSize: { xs: "2.2rem", md: "3.5rem" } }} mt={{ md: "32vh", xs: "25vh" }}>
 						Des menus que vous ne trouverez pas ici, vous ne les trouverez pas nulle part ailleurs.
 					</Typography>
-					<Button className='button-reservation' endIcon={<EditIcon />} variant="contained" disableElevation
-						sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", fontSize: "16px", width: "160px", backgroundColor: "#000", borderRadius: "50px" }}
-					>
-						Reservation
-					</Button>
+					<Link smooth spy duration={400} style={{ textDecoration: "none" }} to="footer">
+						<Button className='button-reservation' endIcon={<EditIcon />} variant="contained" disableElevation
+							sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", fontSize: "16px", width: "160px", backgroundColor: "#000", borderRadius: "50px" }}
+						>
+							Reservation
+						</Button>
+					</Link>
 				</Stack>
 			</Container>
 
@@ -78,8 +80,8 @@ const Home = (props: any) => {
 						<Grid container item xs={12} md={matchesQuery ? 6 : 4} sx={{ textAlign: { xs: "center", md: "start" } }} >
 							<Container maxWidth={false} >
 								<Box component="img" src={promotion} alt="Food" sx={{ width: 350, maxWidth: { xs: 250, md: 350 }, borderRadius: 3 }} />
-								<Stack direction="row" alignItems={"center"} spacing={1} textAlign={"center"} justifyContent={{xs: "center", md :"start"}}>
-									<h3 style={{lineHeight : 1}}>
+								<Stack direction="row" alignItems={"center"} spacing={1} textAlign={"center"} justifyContent={{ xs: "center", md: "start" }}>
+									<h3 style={{ lineHeight: 1 }}>
 										Burger Tasty King
 									</h3>
 									<Typography sx={{ fontFamily: "circular", fontSize: 13, py: 0.2, px: 1, backgroundColor: "#edbb28", borderRadius: 50, width: 40 }}>
@@ -168,7 +170,7 @@ const Home = (props: any) => {
 			</ScrollToTop>
 		</>
 	);
-}
+};
 
 
 export default Home;
