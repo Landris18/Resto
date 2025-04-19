@@ -39,7 +39,7 @@ const TabPanel = (props: TabPanelProps) => {
         >
             {value === index && (
                 <Stack direction="row" py={1} className="slider">
-                    <div className={stopped ? "slide-track-stopped" : "slide-track"}>
+                    <Stack className={stopped ? "slide-track-stopped" : "slide-track"} direction={"row"} gap={2}>
                         {
                             data.map((menu, index) => (
                                 <div key={index} className="slide">
@@ -51,7 +51,7 @@ const TabPanel = (props: TabPanelProps) => {
                                 </div>
                             ))
                         }
-                    </div>
+                    </Stack>
                 </Stack>
             )}
         </div>

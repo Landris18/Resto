@@ -10,7 +10,7 @@ export default function CardMenu(
     { name, price, image }: { name: string; price: string; image: any }
 ) {
     return (
-        <Card sx={{ maxWidth: 345 }} className="card-menu">
+        <Card sx={{ width: 274 }} className="card-menu">
             <CardMedia
                 component="img"
                 height="250"
@@ -19,11 +19,11 @@ export default function CardMenu(
             />
             <CardContent>
                 <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
-                    <Typography variant="body1" sx={{ fontFamily: "circular", color: "#333" }}>
+                    <Typography variant="body1" sx={{ fontFamily: "circular", color: "#000" }}>
                         {name}
                     </Typography>
-                    <Typography sx={{ fontFamily: "circular", color: "#fff", fontSize: 13, py: 0.2, px: 1, width: 28, backgroundColor: "#fc0330", borderRadius: 50 }}>
-                        {price}
+                    <Typography sx={{ fontFamily: "circular", color: "#fff", fontSize: 13, py: 0.2, px: 1, backgroundColor: "#fc0330", borderRadius: 50 }}>
+                        {price} Ar
                     </Typography>
                 </Stack>
             </CardContent>

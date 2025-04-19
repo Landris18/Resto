@@ -63,7 +63,7 @@ const Navbar = (props: any) => {
     return (
         <ElevationScroll {...props}>
             <AppBar>
-                <Container maxWidth="xl">
+                <Container maxWidth="lg">
                     <Toolbar disableGutters>
 
                         {/* Header desktop            */}
@@ -83,7 +83,7 @@ const Navbar = (props: any) => {
                                     duration={400}
                                     offset={-90}
                                     style={{ textDecoration: "none", justifyContent: "center" }}>
-                                    <Box component="h5" onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: "circular", pr: 5, cursor: "pointer" }}>
+                                    <Box component="h5" onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', fontFamily: "circular", pr: 5, cursor: "pointer" }}>
                                         {page}
                                     </Box>
                                 </Link>

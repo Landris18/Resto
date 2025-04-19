@@ -20,55 +20,55 @@ export const offers = [
     {
         "id" : 1,
         "name": "Composé spécial",
-        "price": "20 $",
+        "price": "20 000",
         "image": offer1
     },
     {
         "id" : 2,
         "name": "French tacos",
-        "price": "50 $",
+        "price": "50 000",
         "image": offer2
     },
     {
         "id" : 3,
         "name": "Poulet grillé",
-        "price": "10 $",
+        "price": "10 000",
         "image": offer1
     },
     {
         "id" : 4,
         "name": "French tacos",
-        "price": "5 $",
+        "price": "5 000",
         "image": offer2
     },
     {
         "id" : 5,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": offer1
     },
     {
         "id" : 6,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": offer2
     },
     {
         "id" : 7,
         "name": "French tacos",
-        "price": "5 $",
+        "price": "5 000",
         "image": offer2
     },
     {
         "id" : 8,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": offer1
     },
     {
         "id" : 9,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": offer2
     }
 ];
@@ -77,85 +77,85 @@ export const starters = [
     {
         "id" : 1,
         "name": "Composé spécial",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter1
     },
     {
         "id" : 2,
         "name": "French tacos",
-        "price": "50 $",
+        "price": "50 000",
         "image": starter7
     },
     {
         "id" : 3,
         "name": "Poulet grillé",
-        "price": "10 $",
+        "price": "10 000",
         "image": starter2
     },
     {
         "id" : 4,
         "name": "French tacos",
-        "price": "5 $",
+        "price": "5 000",
         "image": starter3
     },
     {
         "id" : 5,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": starter6
     },
     {
         "id" : 6,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter4
     },
     {
         "id" : 7,
         "name": "French tacos",
-        "price": "5 $",
+        "price": "5 000",
         "image": starter2
     },
     {
         "id" : 8,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": starter5
     },
     {
         "id" : 9,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter4
     },
     {
         "id" : 10,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": starter6
     },
     {
         "id" : 11,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter3
     },
     {
         "id" : 12,
         "name": "Burger master",
-        "price": "30 $",
+        "price": "30 000",
         "image": starter7
     },
     {
         "id" : 13,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter5
     },
     {
         "id" : 14,
         "name": "Pizza continentale",
-        "price": "20 $",
+        "price": "20 000",
         "image": starter1
     },
 ];
@@ -164,85 +164,85 @@ export const pastries = [
     {
         "id" : 1,
         "name": "French morning",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie1
     },
     {
         "id" : 2,
         "name": "Mango juice",
-        "price": "50 $",
+        "price": "50 000",
         "image": pastrie7
     },
     {
         "id" : 3,
         "name": "MilkShake",
-        "price": "10 $",
+        "price": "10 000",
         "image": pastrie2
     },
     {
         "id" : 4,
         "name": "Cake bista",
-        "price": "5 $",
+        "price": "5 000",
         "image": pastrie3
     },
     {
         "id" : 5,
         "name": "Mofogasy",
-        "price": "30 $",
+        "price": "30 000",
         "image": pastrie6
     },
     {
         "id" : 6,
         "name": "Boiled",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie4
     },
     {
         "id" : 7,
         "name": "Mofo ravina",
-        "price": "5 $",
+        "price": "5 000",
         "image": pastrie2
     },
     {
         "id" : 8,
         "name": "Tambavy",
-        "price": "30 $",
+        "price": "30 000",
         "image": pastrie5
     },
     {
         "id" : 9,
         "name": "Mofogasy",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie4
     },
     {
         "id" : 10,
         "name": "King cake",
-        "price": "30 $",
+        "price": "30 000",
         "image": pastrie6
     },
     {
         "id" : 11,
         "name": "Boiled",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie3
     },
     {
         "id" : 12,
         "name": "Tasty juice",
-        "price": "30 $",
+        "price": "30 000",
         "image": pastrie7
     },
     {
         "id" : 13,
         "name": "MilkShake",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie5
     },
     {
         "id" : 14,
         "name": "King cake",
-        "price": "20 $",
+        "price": "20 000",
         "image": pastrie1
     },
 ];

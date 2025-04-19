@@ -14,10 +14,10 @@ $animationSpeed: 40s;
 // Styling
 .slider {
 	background: white;
-	margin: auto;
-	margin-top: 20px;
+	// margin: auto;
+	// margin-top: 20px;
 	overflow:hidden;
-	width: 90%;
+	width: 100%;
 	
 	&::before,
 	&::after {
@@ -51,10 +51,10 @@ $animationSpeed: 40s;
 		width: calc(250px * 14);
 	}
 	
-	.slide {
-		width: 250px;
-		margin-left: 15px;
-	}
+	// .slide {
+	// 	width: 250px;
+	// 	margin-left: 15px;
+	// }
 }
 
 .card-menu {

@@ -47,8 +47,8 @@ export default function Reservation() {
 			<Typography sx={{ color: "white", fontSize: 14, fontWeight: "500", fontFamily: "circular", mt: 2 }}>
 				Réserver dès maintenant une table.
 			</Typography>
-			<LocalizationProvider adapterLocale="fr" dateAdapter={AdapterDayjs} >
-				<Stack direction="column" marginTop={3} spacing={3}>
+			<LocalizationProvider adapterLocale="fr" dateAdapter={AdapterDayjs}>
+				<Stack gap={2} mt={4}>
 					<DateTimePicker
 						label="Date de reservation"
 						value={value}
@@ -66,10 +66,8 @@ export default function Reservation() {
 							/>
 						}
 					/>
-				</Stack>
-				<Stack direction="row" marginTop={3} spacing={1.2}>
 					<Input
-						label="Nombre"
+						label="Nombre de personne"
 						type="number"
 						sx={{
 							svg: { color },
@@ -88,9 +86,8 @@ export default function Reservation() {
 					/>
 				</Stack>
 			</LocalizationProvider>
-			<Fab variant="extended" sx={{ boxShadow: "none", height: 35, borderRadius: 0.5, fontFamily: "circular", textTransform: "capitalize", marginTop: 2 }}>
-				<EditIcon sx={{ mr: 1, fontSize: 15 }} />
-				Réserver
+			<Fab variant="extended" sx={{ boxShadow: "none", height: 35, borderRadius: 0, fontFamily: "circular", textTransform: "capitalize", marginTop: 3 }}>
+				<EditIcon sx={{ mr: 1, fontSize: 15 }} /> Réserver
 			</Fab>
 		</ThemeProvider>
 	);
